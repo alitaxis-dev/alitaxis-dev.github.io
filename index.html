@@ -4,17 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ali Taxis | Pembury Taxi Service & Airport Transfers</title>
+<title>Airport Transfers | Ali Taxis Pembury</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
 }
 
 body{
@@ -25,40 +21,28 @@ body{
 
 header{
     background:#111827;
-    color:white;
     padding:20px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
 }
 
 .logo{
-    font-size:30px;
-    font-weight:bold;
     color:#facc15;
-}
-
-nav{
-    display:flex;
-    gap:20px;
+    font-size:28px;
+    font-weight:bold;
 }
 
 nav a{
     color:white;
     text-decoration:none;
+    margin-left:20px;
     font-weight:bold;
 }
 
-nav a:hover{
-    color:#facc15;
-}
-
 .hero{
-    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80');
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80');
     background-size:cover;
     background-position:center;
     text-align:center;
@@ -72,46 +56,22 @@ nav a:hover{
 }
 
 .hero p{
-    max-width:800px;
-    margin:0 auto 30px;
-    font-size:1.2rem;
+    max-width:900px;
+    margin:auto;
 }
 
 .btn{
     display:inline-block;
+    margin-top:25px;
     padding:15px 25px;
-    margin:10px;
-    text-decoration:none;
     border-radius:10px;
+    text-decoration:none;
     font-weight:bold;
-    transition:0.3s;
-}
-
-.call-btn{
-    background:#facc15;
-    color:black;
-}
-
-.call-btn:hover{
-    background:#eab308;
 }
 
 .whatsapp-btn{
     background:#25D366;
     color:white;
-}
-
-.whatsapp-btn:hover{
-    background:#1fb857;
-}
-
-.airport-btn{
-    background:#111827;
-    color:white;
-}
-
-.airport-btn:hover{
-    background:#000;
 }
 
 .section{
@@ -123,36 +83,45 @@ nav a:hover{
     margin-bottom:40px;
 }
 
-.services{
+.price-table{
+    width:100%;
+    max-width:850px;
+    margin:auto;
+    border-collapse:collapse;
+}
+
+.price-table th{
+    background:#111827;
+    color:white;
+    padding:15px;
+}
+
+.price-table td{
+    border:1px solid #ddd;
+    padding:15px;
+    text-align:center;
+}
+
+.info-box{
+    max-width:900px;
+    margin:40px auto;
+    background:#f3f4f6;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.features{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+    gap:20px;
 }
 
 .card{
-    background:#f7f7f7;
+    background:#f8f8f8;
     padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-.card h3{
-    margin-bottom:10px;
-}
-
-.review-section{
-    background:#f3f4f6;
-}
-
-.review-btn{
-    background:#4285F4;
-    color:white;
-    padding:15px 25px;
-    text-decoration:none;
-    border-radius:10px;
-    display:inline-block;
-    margin-top:20px;
-    font-weight:bold;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
 }
 
 .contact{
@@ -161,8 +130,8 @@ nav a:hover{
     text-align:center;
 }
 
-.contact .btn{
-    margin-top:20px;
+.contact a{
+    color:white;
 }
 
 footer{
@@ -174,176 +143,189 @@ footer{
 
 .whatsapp-float{
     position:fixed;
+    right:20px;
+    bottom:20px;
     width:70px;
     height:70px;
-    bottom:20px;
-    right:20px;
     background:#25D366;
     color:white;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:34px;
     text-decoration:none;
-    box-shadow:0 4px 15px rgba(0,0,0,0.3);
-    z-index:9999;
+    font-size:30px;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
 }
 
 @media(max-width:768px){
+.hero h1{
+font-size:2rem;
+}
 
 header{
-    flex-direction:column;
-    gap:15px;
-}
-
-nav{
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.hero h1{
-    font-size:2rem;
+flex-direction:column;
+gap:15px;
 }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo">ALI TAXIS</div>
 
-    <nav>
-        <a href="#services">Services</a>
-        <a href="airport-transfers.html">Airport Transfers</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<div class="logo">ALI TAXIS</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="#prices">Prices</a>
+<a href="#contact">Contact</a>
+</nav>
+
 </header>
 
 <section class="hero">
 
-    <h1>Pembury's Trusted Taxi Service</h1>
+<h1>Airport Transfer Service</h1>
 
-    <p>
-        Reliable taxi journeys, airport transfers,
-        station runs, business travel and long-distance trips.
-        Available 24 hours a day, 7 days a week.
-    </p>
+<p>
+Reliable airport transfers from Pembury, Tunbridge Wells,
+Tonbridge, Paddock Wood and surrounding areas.
+Available 24 hours a day with advance booking.
+</p>
 
-    <a href="tel:07396736270" class="btn call-btn">
-        📞 Call 07396 736270
-    </a>
+<a class="btn whatsapp-btn"
+href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20to%20book%20an%20airport%20transfer">
+💬 Book Airport Transfer
+</a>
 
-    <a href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20to%20book%20a%20taxi"
-       class="btn whatsapp-btn"
-       target="_blank">
-        💬 Book on WhatsApp
-    </a>
+</section>
 
-    <a href="airport-transfers.html" class="btn airport-btn">
-        ✈ Airport Transfers
-    </a>
+<section class="section" id="prices">
+
+<h2>Airport Transfer Prices From Pembury</h2>
+
+<table class="price-table">
+
+<tr>
+<th>Airport</th>
+<th>Price From</th>
+</tr>
+
+<tr>
+<td>Heathrow Airport</td>
+<td><strong>£125</strong></td>
+</tr>
+
+<tr>
+<td>Gatwick Airport</td>
+<td><strong>£85</strong></td>
+</tr>
+
+<tr>
+<td>London City Airport</td>
+<td><strong>£110</strong></td>
+</tr>
+
+<tr>
+<td>Stansted Airport</td>
+<td><strong>£140</strong></td>
+</tr>
+
+<tr>
+<td>Luton Airport</td>
+<td><strong>£180</strong></td>
+</tr>
+
+</table>
+
+<div class="info-box">
+
+<p>
+<strong>🚖 All prices shown are from Pembury and are for a standard saloon vehicle.</strong>
+</p>
+
+<br>
+
+<p>
+Larger vehicles are available on request.
+</p>
+
+<br>
+
+<p>
+Airport drop-off charges, airport access fees, parking fees,
+meet & greet charges and waiting time are not included unless otherwise stated.
+</p>
+
+</div>
+
+<div style="text-align:center;">
+
+<a class="btn whatsapp-btn"
+href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20an%20airport%20transfer%20quote">
+💬 Get a Quote on WhatsApp
+</a>
+
+</div>
 
 </section>
 
 <section class="section">
 
-    <h2>Serving Pembury & Surrounding Areas</h2>
+<h2>Why Choose Ali Taxis?</h2>
 
-    <p style="text-align:center;max-width:900px;margin:auto;">
-        Based in Pembury, Kent and serving Tunbridge Wells,
-        Tonbridge, Paddock Wood, Matfield, Horsmonden and surrounding Villages.
-        Fast, professional and reliable transportation whenever you need it.
-    </p>
+<div class="features">
 
-</section>
+<div class="card">
+<h3>✈ Airport Specialists</h3>
+<p>Reliable transfers to all major UK airports.</p>
+</div>
 
-<section class="section" id="services">
+<div class="card">
+<h3>🕒 24/7 Service</h3>
+<p>Early mornings, late nights and everything in between.</p>
+</div>
 
-    <h2>Our Services</h2>
+<div class="card">
+<h3>🚕 Comfortable Vehicles</h3>
+<p>Clean, modern and comfortable transport.</p>
+</div>
 
-    <div class="services">
+<div class="card">
+<h3>📍 Local Service</h3>
+<p>Based in Pembury and serving the surrounding area.</p>
+</div>
 
-        <div class="card">
-            <h3>✈ Airport Transfers</h3>
-            <p>Transfers to Heathrow, Gatwick, Stansted, Luton and London City Airport.</p>
-        </div>
-
-        <div class="card">
-            <h3>🚕 Local Taxi Service</h3>
-            <p>Reliable local transport throughout Pembury and surrounding areas.</p>
-        </div>
-
-        <div class="card">
-            <h3>🚆 Station Transfers</h3>
-            <p>Convenient station pickups and drop-offs.</p>
-        </div>
-
-        <div class="card">
-            <h3>💼 Business Travel</h3>
-            <p>Professional travel for meetings and executive transport.</p>
-        </div>
-
-        <div class="card">
-            <h3>🌙 24/7 Availability</h3>
-            <p>Available day and night by advance booking.</p>
-        </div>
-
-        <div class="card">
-            <h3>📍 Long Distance Travel</h3>
-            <p>Comfortable travel across the UK.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="section review-section" id="reviews">
-
-    <h2>★★★★★ Google Reviews</h2>
-
-    <p style="text-align:center;max-width:700px;margin:auto;">
-        Customer satisfaction is at the heart of everything we do.
-        Read our reviews or leave your own feedback.
-    </p>
-
-    <div style="text-align:center;">
-
-        <a href="https://g.page/r/CfbLxODpdldlEBM/review"
-           target="_blank"
-           class="review-btn">
-            ⭐ Leave a Google Review
-        </a>
-
-    </div>
+</div>
 
 </section>
 
 <section class="section contact" id="contact">
 
-    <h2>Contact Ali Taxis</h2>
+<h2>Book Your Airport Transfer</h2>
 
-    <p>📞 07396 736270</p>
-    <p>📧 alitaxistw@gmail.com</p>
-    <p>📍 Based in Pembury, Kent</p>
+<p>📞 07396 736270</p>
+<p>📧 alitaxistw@gmail.com</p>
+<p>📍 Pembury, Kent</p>
 
-    <a href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20to%20book%20a%20taxi"
-       class="btn whatsapp-btn"
-       target="_blank">
-       💬 Book via WhatsApp
-    </a>
+<br>
+
+<a class="btn whatsapp-btn"
+href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20to%20book%20an%20airport%20transfer">
+💬 Book via WhatsApp
+</a>
 
 </section>
 
 <footer>
-    © 2026 Ali Taxis | Pembury, Kent
+© 2026 Ali Taxis | Airport Transfers from Pembury
 </footer>
 
-<a href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20to%20book%20a%20taxi"
-   target="_blank"
-   class="whatsapp-float">
-   💬
+<a class="whatsapp-float"
+href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20to%20book%20an%20airport%20transfer">
+💬
 </a>
 
 </body>
