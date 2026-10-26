@@ -4,327 +4,419 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Airport Transfers | Ali Taxis Paddock Wood</title>
+<title>Ali Taxis | Airport Transfers & Taxi Service Around Paddock Wood</title>
+
+<meta name="description" content="Ali Taxis provides reliable airport transfers and taxi services around Paddock Wood, Pembury, Five Oak Green, Horsmonden, Goudhurst, Tonbridge and Tunbridge Wells.">
+
+<meta name="keywords" content="Taxi Paddock Wood, Airport Transfers Paddock Wood, Heathrow Taxi, Gatwick Taxi, Stansted Taxi, Luton Taxi, London City Airport Taxi, Taxi Pembury, Taxi Horsmonden, Taxi Goudhurst, Taxi Tonbridge, Taxi Tunbridge Wells">
+
+<meta name="author" content="Ali Taxis">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#D4AF37">
+
+<meta property="og:title" content="Ali Taxis Airport Transfers">
+<meta property="og:description" content="Reliable airport transfers around Paddock Wood and surrounding areas.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"TaxiService",
+  "name":"Ali Taxis",
+  "telephone":"+447396736270",
+  "email":"AliTaxisTW@gmail.com",
+  "url":"https://alitaxis.co.uk",
+  "priceRange":"££",
+  "serviceType":"Airport Transfers",
+  "areaServed":[
+    "Paddock Wood",
+    "Pembury",
+    "Five Oak Green",
+    "Horsmonden",
+    "Goudhurst",
+    "Tonbridge",
+    "Tunbridge Wells"
+  ]
+}
+</script>
 
 <style>
+
+:root{
+    --gold:#D4AF37;
+    --black:#000000;
+    --dark:#111111;
+    --white:#ffffff;
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Poppins',sans-serif;
+    background:#000;
+    color:#fff;
     line-height:1.6;
-    color:#333;
-}
-
-header{
-    background:#111827;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    color:#facc15;
-    font-size:28px;
-    font-weight:bold;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
 }
 
 .hero{
-    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-    url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80');
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+    url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80');
     background-size:cover;
     background-position:center;
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    color:white;
-    padding:120px 20px;
+    padding:40px 20px;
+}
+
+.hero-content{
+    max-width:1100px;
+}
+
+.logo-container{
+    margin-bottom:15px;
+}
+
+.main-logo{
+    width:450px;
+    max-width:85%;
+    height:auto;
+    display:block;
+    margin:0 auto 20px;
 }
 
 .hero h1{
-    font-size:3rem;
+    font-family:'Cinzel',serif;
+    font-size:2.5rem;
+    color:var(--gold);
     margin-bottom:20px;
 }
 
 .hero p{
-    max-width:900px;
+    max-width:800px;
     margin:auto;
+    font-size:1.1rem;
+}
+
+.buttons{
+    margin-top:35px;
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:15px 25px;
-    border-radius:10px;
+    padding:15px 30px;
+    border-radius:40px;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:600;
+    transition:0.3s;
 }
 
-.whatsapp-btn{
-    background:#25D366;
-    color:white;
+.btn-primary{
+    background:var(--gold);
+    color:#000;
 }
 
-.section{
-    padding:80px 8%;
+.btn-outline{
+    border:2px solid var(--gold);
+    color:var(--gold);
 }
 
-.section h2{
-    text-align:center;
-    margin-bottom:40px;
+.btn:hover{
+    transform:translateY(-2px);
 }
 
-.price-table{
-    width:100%;
-    max-width:850px;
+.container{
+    max-width:1200px;
     margin:auto;
-    border-collapse:collapse;
+    padding:80px 20px;
 }
 
-.price-table th{
-    background:#111827;
-    color:white;
-    padding:15px;
-}
-
-.price-table td{
-    border:1px solid #ddd;
-    padding:15px;
+.section-title{
     text-align:center;
-}
-
-.info-box{
-    max-width:900px;
-    margin:40px auto;
-    background:#f3f4f6;
-    padding:25px;
-    border-radius:12px;
-    text-align:center;
+    color:var(--gold);
+    font-family:'Cinzel',serif;
+    font-size:2.2rem;
+    margin-bottom:40px;
 }
 
 .features{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:#111;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid rgba(212,175,55,.3);
+    text-align:center;
+}
+
+.feature h3{
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+.prices{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
 }
 
-.card{
-    background:#f8f8f8;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,.08);
-}
-
-.contact{
-    background:#111827;
-    color:white;
+.price-card{
+    background:#111;
+    padding:30px;
+    border-radius:20px;
     text-align:center;
+    border:1px solid rgba(212,175,55,.3);
 }
 
-.contact a{
-    color:white;
+.price-card h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:var(--gold);
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.notice{
+    background:#111;
+    margin-top:30px;
+    padding:25px;
+    border-left:4px solid var(--gold);
+    border-radius:10px;
+}
+
+.service-area{
+    background:#111;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
 }
 
 footer{
-    background:black;
-    color:white;
+    background:#080808;
     text-align:center;
-    padding:20px;
+    padding:50px 20px;
+    border-top:1px solid rgba(212,175,55,.2);
+}
+
+footer h2{
+    font-family:'Cinzel',serif;
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+footer p{
+    margin:8px 0;
 }
 
 .whatsapp-float{
     position:fixed;
-    right:20px;
-    bottom:20px;
-    width:70px;
-    height:70px;
+    bottom:25px;
+    right:25px;
+    width:65px;
+    height:65px;
     background:#25D366;
-    color:white;
     border-radius:50%;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
+    color:white;
     text-decoration:none;
     font-size:30px;
-    box-shadow:0 4px 12px rgba(0,0,0,.3);
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
+
 .hero h1{
-font-size:2rem;
+    font-size:1.8rem;
 }
 
-header{
-flex-direction:column;
-gap:15px;
+.section-title{
+    font-size:1.7rem;
 }
+
+.main-logo{
+    width:320px;
 }
+
+}
+
 </style>
+
 </head>
-
 <body>
-
-<header>
-
-<div class="logo">ALI TAXIS</div>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="#prices">Prices</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</header>
 
 <section class="hero">
 
-<h1>Airport Transfer Service</h1>
+<div class="hero-content">
 
-<p>
-Reliable airport transfers from Pembury, Tunbridge Wells,
-Tonbridge, Paddock Wood, Matfield, Horsmonden and surrounding villages.
-Available 24 hours a day with advance booking.
-</p>
-
-<a class="btn whatsapp-btn"
-href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20to%20book%20an%20airport%20transfer">
-💬 Book Airport Transfer
-</a>
-
-</section>
-
-<section class="section" id="prices">
-
-<h2>Airport Transfer Prices From Paddock Wood</h2>
-
-<table class="price-table">
-
-<tr>
-<th>Airport</th>
-<th>Price From</th>
-</tr>
-
-<tr>
-<td>Heathrow Airport</td>
-<td><strong>£125</strong></td>
-</tr>
-
-<tr>
-<td>Gatwick Airport</td>
-<td><strong>£85</strong></td>
-</tr>
-
-<tr>
-<td>London City Airport</td>
-<td><strong>£110</strong></td>
-</tr>
-
-<tr>
-<td>Stansted Airport</td>
-<td><strong>£140</strong></td>
-</tr>
-
-<tr>
-<td>Luton Airport</td>
-<td><strong>£180</strong></td>
-</tr>
-
-</table>
-
-<div class="info-box">
-
-<p>
-<strong> All prices shown are from Paddock Wood and are for a standard saloon vehicle.</strong>
-</p>
-
-<br>
-
-<p>
-Larger vehicles are available on request.
-</p>
-
-<br>
-
-<p>
-Airport drop-off charges, airport access fees, parking fees,
-meet & greet charges and waiting time are not included.
-</p>
-
+<div class="logo-container">
+    <img src="logo.png" alt="Ali Taxis Paddock Wood" class="main-logo">
 </div>
 
-<div style="text-align:center;">
+<h1>Airport Transfers & Taxi Service Around Paddock Wood and Surrounding Areas</h1>
 
-<a class="btn whatsapp-btn"
-href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20an%20airport%20transfer%20quote">
-💬 Get a Quote on WhatsApp
+<p>
+Ali Taxis provides reliable airport transfers, local taxi services,
+long-distance journeys and station transfers around Paddock Wood,
+Pembury, Five Oak Green, Horsmonden, Goudhurst, Tonbridge and
+Tunbridge Wells.
+</p>
+
+<div class="buttons">
+
+<a href="https://wa.me/447396736270" class="btn btn-primary">
+WhatsApp
 </a>
+
+<a href="tel:07396736270" class="btn btn-primary">
+Call Now
+</a>
+
+<a href="mailto:AliTaxisTW@gmail.com" class="btn btn-outline">
+Email Us
+</a>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="section">
+<section class="container">
 
-<h2>Why Choose Ali Taxis?</h2>
+<h2 class="section-title">Why Choose Ali Taxis</h2>
 
 <div class="features">
 
-<div class="card">
-<h3>✈ Airport Specialists</h3>
-<p>Reliable transfers to all major UK airports.</p>
+<div class="feature">
+<h3>✈ Airport Transfers</h3>
+<p>Regular transfers to Heathrow, Gatwick, Stansted, Luton and London City Airport.</p>
 </div>
 
-<div class="card">
-<h3>🕒 24/7 Service</h3>
-<p>Early mornings, late nights and everything in between.</p>
+<div class="feature">
+<h3>🚖 Reliable Service</h3>
+<p>Punctual pickups, professional service and comfortable vehicles.</p>
 </div>
 
-<div class="card">
-<h3>🚕 Comfortable Vehicles</h3>
-<p>Clean, modern and comfortable transport.</p>
-</div>
-
-<div class="card">
-<h3>📍 Local Service</h3>
-<p>Based in Pembury and serving the surrounding area.</p>
+<div class="feature">
+<h3>🚉 Station Transfers</h3>
+<p>Convenient transport to local and national train stations.</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section contact" id="contact">
+<section class="container">
 
-<h2>Book Your Airport Transfer</h2>
+<h2 class="section-title">Airport Transfer Prices From Paddock Wood</h2>
 
-<p>📞 07396 736270</p>
-<p>📧 alitaxistw@gmail.com</p>
-<p>📍 Pembury, Kent</p>
+<div class="prices">
 
+<div class="price-card">
+<h3>Heathrow Airport</h3>
+<div class="price">£125</div>
+</div>
+
+<div class="price-card">
+<h3>Gatwick Airport</h3>
+<div class="price">£85</div>
+</div>
+
+<div class="price-card">
+<h3>London City Airport</h3>
+<div class="price">£110</div>
+</div>
+
+<div class="price-card">
+<h3>Stansted Airport</h3>
+<div class="price">£140</div>
+</div>
+
+<div class="price-card">
+<h3>Luton Airport</h3>
+<div class="price">£180</div>
+</div>
+
+</div>
+
+<div class="notice">
+<p><strong>Airport drop-off charges, airport access fees, parking fees, meet & greet charges and waiting time are not included.</strong></p>
 <br>
+<p><strong>All prices shown are from Paddock Wood and are for a standard car.</strong></p>
+<br>
+<p><strong>Larger vehicles available. Price on request.</strong></p>
+</div>
 
-<a class="btn whatsapp-btn"
-href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20to%20book%20an%20airport%20transfer">
-💬 Book via WhatsApp
-</a>
+</section>
+
+<section class="container">
+
+<h2 class="section-title">Areas Covered</h2>
+
+<div class="service-area">
+<p>
+Paddock Wood • Pembury • Five Oak Green • Horsmonden •
+Goudhurst • Tonbridge • Tunbridge Wells
+</p>
+</div>
+
+</section>
+
+<section class="container">
+
+<h2 class="section-title">Google Reviews</h2>
+
+<div class="notice">
+<p>
+Paste your Google Reviews widget code here from Elfsight,
+SociableKIT or Google Reviews Pro.
+</p>
+</div>
 
 </section>
 
 <footer>
-© 2026 Ali Taxis | Airport Transfers from Pembury
+
+<h2>ALI TAXIS</h2>
+
+<p>Airport Transfers Around Paddock Wood and Surrounding Areas</p>
+
+<p>📞 07396 736270</p>
+
+<p>✉️ AliTaxisTW@gmail.com</p>
+
+<p>Available 24/7 By Pre-Booking</p>
+
 </footer>
 
-<a class="whatsapp-float"
-href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20to%20book%20an%20airport%20transfer">
+<a href="https://wa.me/447396736270" class="whatsapp-float" aria-label="WhatsApp">
 💬
 </a>
 
