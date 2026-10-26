@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ali Taxis | Paddock Wood, Pembury & Tunbridge Wells Taxi Service</title>
+<title>Ali Taxis | Pembury Taxi Service & Airport Transfers</title>
 
 <style>
 *{
@@ -25,7 +25,7 @@ body{
 
 header{
     background:#111827;
-    color:#fff;
+    color:white;
     padding:20px 8%;
     display:flex;
     justify-content:space-between;
@@ -36,7 +36,7 @@ header{
 }
 
 .logo{
-    font-size:28px;
+    font-size:30px;
     font-weight:bold;
     color:#facc15;
 }
@@ -57,12 +57,12 @@ nav a:hover{
 }
 
 .hero{
-    background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
     url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80');
     background-size:cover;
     background-position:center;
-    color:white;
     text-align:center;
+    color:white;
     padding:120px 20px;
 }
 
@@ -81,9 +81,10 @@ nav a:hover{
     display:inline-block;
     padding:15px 25px;
     margin:10px;
-    border-radius:10px;
     text-decoration:none;
+    border-radius:10px;
     font-weight:bold;
+    transition:0.3s;
 }
 
 .call-btn{
@@ -91,14 +92,26 @@ nav a:hover{
     color:black;
 }
 
+.call-btn:hover{
+    background:#eab308;
+}
+
 .whatsapp-btn{
     background:#25D366;
     color:white;
 }
 
+.whatsapp-btn:hover{
+    background:#1fb857;
+}
+
 .airport-btn{
     background:#111827;
     color:white;
+}
+
+.airport-btn:hover{
+    background:#000;
 }
 
 .section{
@@ -118,8 +131,8 @@ nav a:hover{
 
 .card{
     background:#f7f7f7;
-    border-radius:12px;
     padding:25px;
+    border-radius:15px;
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
@@ -135,8 +148,8 @@ nav a:hover{
     background:#4285F4;
     color:white;
     padding:15px 25px;
-    border-radius:8px;
     text-decoration:none;
+    border-radius:10px;
     display:inline-block;
     margin-top:20px;
     font-weight:bold;
@@ -148,8 +161,8 @@ nav a:hover{
     text-align:center;
 }
 
-.contact a{
-    color:white;
+.contact .btn{
+    margin-top:20px;
 }
 
 footer{
@@ -161,20 +174,20 @@ footer{
 
 .whatsapp-float{
     position:fixed;
-    bottom:20px;
-    right:20px;
     width:70px;
     height:70px;
+    bottom:20px;
+    right:20px;
     background:#25D366;
     color:white;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:32px;
+    font-size:34px;
     text-decoration:none;
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
     z-index:9999;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 @media(max-width:768px){
@@ -184,18 +197,17 @@ header{
     gap:15px;
 }
 
-.hero h1{
-    font-size:2rem;
-}
-
 nav{
     flex-wrap:wrap;
     justify-content:center;
 }
+
+.hero h1{
+    font-size:2rem;
+}
 }
 </style>
 </head>
-
 <body>
 
 <header>
@@ -211,11 +223,11 @@ nav{
 
 <section class="hero">
 
-    <h1>Paddock Wood's Trusted Taxi Service</h1>
+    <h1>Pembury's Trusted Taxi Service</h1>
 
     <p>
-        Local taxi journeys, airport transfers, station runs,
-        business travel and long-distance transport across Kent.
+        Reliable taxi journeys, airport transfers,
+        station runs, business travel and long-distance trips.
         Available 24 hours a day, 7 days a week.
     </p>
 
@@ -224,4 +236,115 @@ nav{
     </a>
 
     <a href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20to%20book%20a%20taxi"
-       class="btn whatsapp-btn">
+       class="btn whatsapp-btn"
+       target="_blank">
+        💬 Book on WhatsApp
+    </a>
+
+    <a href="airport-transfers.html" class="btn airport-btn">
+        ✈ Airport Transfers
+    </a>
+
+</section>
+
+<section class="section">
+
+    <h2>Serving Pembury & Surrounding Areas</h2>
+
+    <p style="text-align:center;max-width:900px;margin:auto;">
+        Based in Pembury, Kent and serving Tunbridge Wells,
+        Tonbridge, Paddock Wood, Matfield, Horsmonden and surrounding Villages.
+        Fast, professional and reliable transportation whenever you need it.
+    </p>
+
+</section>
+
+<section class="section" id="services">
+
+    <h2>Our Services</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>✈ Airport Transfers</h3>
+            <p>Transfers to Heathrow, Gatwick, Stansted, Luton and London City Airport.</p>
+        </div>
+
+        <div class="card">
+            <h3>🚕 Local Taxi Service</h3>
+            <p>Reliable local transport throughout Pembury and surrounding areas.</p>
+        </div>
+
+        <div class="card">
+            <h3>🚆 Station Transfers</h3>
+            <p>Convenient station pickups and drop-offs.</p>
+        </div>
+
+        <div class="card">
+            <h3>💼 Business Travel</h3>
+            <p>Professional travel for meetings and executive transport.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌙 24/7 Availability</h3>
+            <p>Available day and night by advance booking.</p>
+        </div>
+
+        <div class="card">
+            <h3>📍 Long Distance Travel</h3>
+            <p>Comfortable travel across the UK.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section review-section" id="reviews">
+
+    <h2>★★★★★ Google Reviews</h2>
+
+    <p style="text-align:center;max-width:700px;margin:auto;">
+        Customer satisfaction is at the heart of everything we do.
+        Read our reviews or leave your own feedback.
+    </p>
+
+    <div style="text-align:center;">
+
+        <a href="https://g.page/r/CfbLxODpdldlEBM/review"
+           target="_blank"
+           class="review-btn">
+            ⭐ Leave a Google Review
+        </a>
+
+    </div>
+
+</section>
+
+<section class="section contact" id="contact">
+
+    <h2>Contact Ali Taxis</h2>
+
+    <p>📞 07396 736270</p>
+    <p>📧 alitaxistw@gmail.com</p>
+    <p>📍 Based in Pembury, Kent</p>
+
+    <a href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20to%20book%20a%20taxi"
+       class="btn whatsapp-btn"
+       target="_blank">
+       💬 Book via WhatsApp
+    </a>
+
+</section>
+
+<footer>
+    © 2026 Ali Taxis | Pembury, Kent
+</footer>
+
+<a href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I'd%20like%20to%20book%20a%20taxi"
+   target="_blank"
+   class="whatsapp-float">
+   💬
+</a>
+
+</body>
+</html>
