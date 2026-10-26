@@ -3,50 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Airport Prices | Ali Taxis</title>
+<title>Ali Taxis | Airport Transfers Paddock Wood</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
 body{
     background:#000;
     color:#fff;
-    font-family:Arial,sans-serif;
-    margin:0;
-    padding:0;
+    line-height:1.6;
 }
 
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
+header{
+    text-align:center;
+    padding:30px 20px;
 }
 
 .logo{
+    max-width:900px;
     width:100%;
-    max-width:700px;
-    display:block;
-    margin:0 auto 20px;
+    height:auto;
 }
 
-h1{
-    text-align:center;
-    color:#d4af37;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:25px;
-}
-
-th{
-    background:#d4af37;
-    color:#000;
-}
-
-th,td{
-    padding:15px;
-    border:1px solid #333;
-    text-align:left;
+.tagline{
+    margin:20px auto;
+    max-width:800px;
+    font-size:1.2rem;
 }
 
 .btn{
@@ -55,80 +42,178 @@ th,td{
     color:#fff;
     text-decoration:none;
     padding:14px 24px;
+    margin:8px;
     border-radius:8px;
-    margin:10px 5px;
     font-weight:bold;
+    transition:0.3s;
 }
 
-.buttons{
+.btn:hover{
+    background:#1ea952;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+h2{
     text-align:center;
-    margin:20px 0;
+    color:#d4af37;
+    margin-bottom:25px;
 }
 
-.back{
+.price-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+.price-table th{
     background:#d4af37;
     color:#000;
 }
 
-footer{
+.price-table th,
+.price-table td{
+    border:1px solid #333;
+    padding:15px;
+    text-align:left;
+}
+
+.contact{
     text-align:center;
-    padding:20px;
-    margin-top:40px;
+}
+
+.contact a{
+    color:#d4af37;
+    text-decoration:none;
+}
+
+footer{
     background:#111;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+.floating-whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,.4);
 }
 </style>
 </head>
 <body>
 
-<div class="container">
+<header>
 
 <img src="logo.png" alt="Ali Taxis" class="logo">
 
-<h1>Airport Transfer Prices</h1>
+<p class="tagline">
+Reliable Airport Transfers around Paddock Wood and Surrounding Areas
+</p>
 
-<div class="buttons">
-    <a href="index.html" class="btn back">🏠 Home</a>
-    <a href="https://wa.me/447396736270" class="btn">💬 WhatsApp</a>
-</div>
+<a href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I%20would%20like%20an%20airport%20transfer%20quote."
+   class="btn">
+   💬 WhatsApp Us
+</a>
 
-<table>
+<a href="mailto:AliTaxisTW@gmail.com?subject=Airport Transfer Enquiry"
+   class="btn">
+   ✉️ Email Us
+</a>
+
+</header>
+
+<section class="container">
+
+<h2>Airport Transfers</h2>
+
+<p style="text-align:center;max-width:900px;margin:auto;">
+Ali Taxis provides reliable airport transfers from Paddock Wood,
+Pembury, Five Oak Green, Horsmonden, Goudhurst and surrounding areas.
+Professional service, fixed prices and comfortable airport travel.
+</p>
+
+</section>
+
+<section class="container">
+
+<h2>Airport Price Guide</h2>
+
+<table class="price-table">
+
 <tr>
-    <th>Airport</th>
-    <th>Price From</th>
+<th>Airport</th>
+<th>Price From</th>
 </tr>
 
 <tr>
-    <td>Heathrow Airport</td>
-    <td>£125</td>
+<td>Heathrow Airport</td>
+<td>£125</td>
 </tr>
 
 <tr>
-    <td>Gatwick Airport</td>
-    <td>£85</td>
+<td>Gatwick Airport</td>
+<td>£85</td>
 </tr>
 
 <tr>
-    <td>London City Airport</td>
-    <td>£110</td>
+<td>London City Airport</td>
+<td>£110</td>
 </tr>
 
 <tr>
-    <td>Stansted Airport</td>
-    <td>£140</td>
+<td>Stansted Airport</td>
+<td>£140</td>
 </tr>
 
 <tr>
-    <td>Luton Airport</td>
-    <td>£180</td>
+<td>Luton Airport</td>
+<td>£180</td>
 </tr>
 
 </table>
 
-</div>
+</section>
+
+<section class="container contact">
+
+<h2>Contact Ali Taxis</h2>
+
+<p>📱 WhatsApp: 07396 736270</p>
+
+<p>
+✉️ Email:
+<a href="mailto:AliTaxisTW@gmail.com">
+AliTaxisTW@gmail.com
+</a>
+</p>
+
+<p>
+Serving Paddock Wood, Pembury, Five Oak Green,
+Horsmonden, Goudhurst and surrounding areas.
+</p>
+
+</section>
 
 <footer>
-    © 2026 Ali Taxis | Airport Transfers Paddock Wood
+© 2026 Ali Taxis | Airport Transfers Paddock Wood
 </footer>
+
+<a href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis,%20I%20would%20like%20an%20airport%20transfer%20quote."
+   class="floating-whatsapp">
+   💬 WhatsApp
+</a>
 
 </body>
 </html>
