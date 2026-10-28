@@ -1,340 +1,546 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Ali Taxis | Airport Transfers in Paddock Wood, Kent</title>
-
-  <meta name="description" content="Ali Taxis provides reliable local taxi services and airport transfers from Pembury, Five Oak Green, Paddock Wood, Horsmonden and Goudhurst. Call 07396 736270.">
-  <meta name="keywords" content="Ali Taxis, Pembury taxi, Five Oak Green taxi, Paddock Wood taxi, Horsmonden taxi, Goudhurst taxi, airport transfers Kent">
-  <meta name="author" content="Ali Taxis">
-  <meta name="robots" content="index, follow">
+  <title>Ali Taxis | Paddock Wood Airport Transfers</title>
+  <meta name="description" content="Book Ali Taxis for airport transfers, long-distance journeys, train stations and local taxi services from Paddock Wood, Pembury and surrounding areas.">
   <meta name="theme-color" content="#000000">
-
   <link rel="canonical" href="https://alitaxis.co.uk/">
-  <link rel="icon" href="/favicon.ico">
-
-  <meta property="og:title" content="Ali Taxis | Airport Transfers">
-  <meta property="og:description" content="Reliable local taxi services and airport transfers throughout Paddock Wood and surrounding Kent areas.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://alitaxis.co.uk/">
-  <meta property="og:site_name" content="Ali Taxis">
-  <meta property="og:image" content="https://alitaxis.co.uk/images/taxi-hero.jpg">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ali Taxis">
-  <meta name="twitter:description" content="Local taxis and airport transfers across Paddock Wood and surrounding areas.">
-  <meta name="twitter:image" content="https://alitaxis.co.uk/images/taxi-hero.jpg">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TaxiService",
-    "name": "Ali Taxis",
-    "url": "https://alitaxis.co.uk/",
-    "telephone": "+447396736270",
-    "email": "AliTaxisTW@gmail.com",
-    "areaServed": [
-      "Paddock Wood",
-      "Pembury",
-      "Five Oak Green",
-      "Horsmonden",
-      "Goudhurst"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": "Kent",
-      "addressCountry": "GB"
-    }
-  }
-  </script>
 
   <style>
+    :root {
+      --black: #080808;
+      --dark: #151515;
+      --gold: #D4AF37;
+      --gold-light: #F4D778;
+      --white: #ffffff;
+      --muted: #c8c8c8;
+      --border: rgba(212, 175, 55, 0.35);
+    }
+
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
     }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 85px;
+      scroll-padding-top: 90px;
     }
 
     body {
-      background: #000;
-      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--black);
+      color: var(--white);
       line-height: 1.7;
     }
 
     a {
-      transition: 0.25s ease;
+      color: inherit;
     }
 
-    /* Navigation */
-    .top-menu {
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    /* Header and navigation */
+    header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      padding: 12px 5%;
-      background: #111;
-      border-bottom: 2px solid #d4af37;
+      background: rgba(0, 0, 0, 0.97);
+      border-bottom: 2px solid var(--gold);
     }
 
-    .nav-brand {
-      color: #d4af37;
-      font-size: 1.2rem;
-      font-weight: bold;
+    .navbar {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       text-decoration: none;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      color: var(--gold);
+      font-size: 1.65rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
       white-space: nowrap;
     }
 
-    .top-menu nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
-
-    .top-menu nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 8px 10px;
-      border-radius: 5px;
-    }
-
-    .top-menu nav a:hover,
-    .top-menu nav a:focus-visible {
-      color: #000;
-      background: #d4af37;
+    .brand-text span {
+      margin-left: 5px;
     }
 
     .menu-toggle {
       display: none;
-      padding: 7px 12px;
-      background: #d4af37;
-      color: #000;
-      border: 0;
-      border-radius: 5px;
-      font-size: 21px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      background: transparent;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 1rem;
       cursor: pointer;
     }
 
-    /* Header */
-    header {
-      text-align: center;
-      padding: 35px 20px;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
 
-    .logo {
-      display: block;
-      max-width: 900px;
-      width: 100%;
-      height: auto;
-      margin: 0 auto;
+    nav a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 10px;
+      border-radius: 4px;
+      transition: color 0.2s, background 0.2s;
     }
 
-    .tagline {
-      margin: 20px auto;
-      max-width: 800px;
-      font-size: 1.2rem;
+    nav a:hover,
+    nav a:focus-visible {
+      color: var(--gold-light);
+      background: #24200f;
+      text-decoration: underline;
+      text-underline-offset: 5px;
     }
 
-    /* Buttons */
-    .btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #d4af37, #f4d03f);
+    nav .nav-book {
+      background: var(--gold);
+      color: #000;
+      margin-left: 5px;
+      padding: 9px 15px;
+    }
+
+    nav .nav-book:hover {
+      background: var(--gold-light);
       color: #000;
       text-decoration: none;
-      padding: 13px 22px;
-      margin: 8px;
-      border-radius: 8px;
-      font-weight: bold;
-      border: 1px solid #d4af37;
     }
 
-    .btn:hover {
-      background: #ffd700;
+    /* Hero */
+    .hero {
+      min-height: 590px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at top, rgba(212, 175, 55, 0.16), transparent 60%),
+        linear-gradient(135deg, #111 0%, #050505 75%);
+      padding: 85px 0;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      line-height: 1.13;
+      margin-bottom: 22px;
+    }
+
+    h1 span,
+    .gold {
+      color: var(--gold);
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 auto 30px;
+      font-size: 1.12rem;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 5px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
       transform: translateY(-2px);
     }
 
-    /* Content sections */
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 50px 20px;
+    .button-gold {
+      color: #000;
+      background: var(--gold);
     }
 
-    h2 {
-      text-align: center;
-      color: #d4af37;
-      margin-bottom: 25px;
-      line-height: 1.3;
+    .button-gold:hover {
+      background: var(--gold-light);
     }
 
-    .about {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
+    .button-outline {
+      color: var(--gold);
+      border: 1px solid var(--gold);
     }
 
-    /* Airport prices */
-    .price-note {
+    .button-outline:hover {
+      background: #24200f;
+    }
+
+    /* General sections */
+    section {
+      padding: 75px 0;
+    }
+
+    .section-heading {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .gold-line {
+      width: 65px;
+      height: 3px;
+      background: var(--gold);
+      margin: 18px auto 0;
+    }
+
+    .services-grid,
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .service-card,
+    .feature-card {
+      padding: 28px 23px;
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .service-card:hover,
+    .feature-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    .card-icon {
+      color: var(--gold);
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3,
+    .feature-card h3 {
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .service-card p,
+    .feature-card p {
+      color: var(--muted);
+    }
+
+    /* Price table */
+    .prices-section {
+      background: #111;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .price-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    .price-table th {
-      background: #d4af37;
-      color: #000;
+      background: #0b0b0b;
     }
 
     .price-table th,
     .price-table td {
-      border: 1px solid #444;
-      padding: 14px;
       text-align: left;
+      padding: 16px 20px;
+      border-bottom: 1px solid #292929;
     }
 
-    .price-table tbody tr:nth-child(even) {
-      background: #151515;
+    .price-table th {
+      background: #24200f;
+      color: var(--gold);
     }
 
-    /* Google Reviews */
-    .reviews-section {
-      background: #101010;
-      border-top: 1px solid #333;
-      border-bottom: 1px solid #333;
+    .price-table td:last-child {
+      color: var(--gold-light);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .price-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .price-note {
+      color: var(--muted);
+      max-width: 800px;
+      margin: 18px auto 0;
+      font-size: 0.92rem;
+    }
+
+    .center-action {
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    /* Areas */
+    .areas-section {
+      background: #080808;
+    }
+
+    .area-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .area-tag {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 9px 17px;
+      border-radius: 30px;
+      background: #111;
+    }
+
+    /* Booking section */
+    .booking-section {
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.94)),
+        radial-gradient(ellipse at center, #493b13, #000);
       text-align: center;
     }
 
-    .review-card {
-      max-width: 700px;
-      margin: auto;
-      padding: 30px 24px;
-      background: #080808;
-      border: 1px solid #d4af37;
-      border-radius: 12px;
-    }
-
-    .google-label {
-      color: #d4af37;
-      font-size: 1.25rem;
-      font-weight: bold;
-      margin-bottom: 12px;
-    }
-
-    .review-card p {
-      margin-bottom: 16px;
+    .booking-section p {
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 auto 25px;
     }
 
     /* Contact */
-    .contact {
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .contact-card {
+      text-align: center;
+      padding: 25px 18px;
+      border: 1px solid var(--border);
+      background: var(--dark);
+      border-radius: 8px;
+    }
+
+    .contact-card h3 {
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-card a:hover {
+      color: var(--gold-light);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 2px solid var(--gold);
+      background: #000;
+      padding: 30px 0;
       text-align: center;
     }
 
-    .contact p {
-      margin-bottom: 10px;
+    footer p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 6px 0;
     }
 
-    .contact a:not(.btn) {
-      color: #d4af37;
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin: 15px 0;
+    }
+
+    .footer-links a {
+      color: var(--gold);
       text-decoration: none;
     }
 
-    .contact a:hover {
+    .footer-links a:hover {
       text-decoration: underline;
     }
 
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 25px 15px;
-      margin-top: 30px;
-      border-top: 1px solid #333;
-    }
-
     /* Floating WhatsApp button */
-    .floating-whatsapp {
+    .whatsapp-float {
       position: fixed;
       right: 20px;
       bottom: 20px;
       z-index: 900;
-      background: linear-gradient(135deg, #d4af37, #f4d03f);
+      background: var(--gold);
       color: #000;
-      padding: 13px 18px;
-      border-radius: 50px;
       text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      font-weight: 800;
+      border-radius: 50px;
+      padding: 12px 18px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
     }
 
-    /* Mobile menu */
-    @media (max-width: 850px) {
-      .top-menu {
-        flex-wrap: wrap;
-      }
+    .whatsapp-float:hover {
+      background: var(--gold-light);
+    }
 
+    :focus-visible {
+      outline: 2px solid var(--gold-light);
+      outline-offset: 3px;
+    }
+
+    /* Mobile layout */
+    @media (max-width: 900px) {
       .menu-toggle {
-        display: block;
-        margin-left: auto;
+        display: inline-block;
       }
 
-      .top-menu nav {
+      .navbar {
+        flex-wrap: wrap;
+        padding: 10px 0;
+      }
+
+      nav {
         display: none;
-        flex-basis: 100%;
+        width: 100%;
         flex-direction: column;
         align-items: stretch;
-        gap: 0;
+        padding: 8px 0 12px;
+        border-top: 1px solid var(--border);
       }
 
-      .top-menu nav.open {
+      nav.open {
         display: flex;
       }
 
-      .top-menu nav a {
-        padding: 12px;
-        border-top: 1px solid #333;
+      nav a {
+        padding: 11px 12px;
       }
 
-      .tagline {
-        font-size: 1.05rem;
+      nav .nav-book {
+        margin: 5px 0 0;
+        text-align: center;
       }
 
-      .container {
-        padding: 40px 16px;
+      .services-grid,
+      .features-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 600px) {
+      .brand img {
+        width: 49px;
+        height: 49px;
+      }
+
+      .brand-text {
+        font-size: 1.35rem;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 75px 0;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .services-grid,
+      .features-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
       .price-table th,
       .price-table td {
-        padding: 9px;
-        font-size: 0.92rem;
+        padding: 13px 12px;
+        font-size: 0.94rem;
       }
 
-      .floating-whatsapp {
+      .button-group .button {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .whatsapp-float {
         right: 12px;
         bottom: 12px;
-      }
-
-      .review-card {
-        padding: 24px 15px;
+        padding: 10px 14px;
       }
     }
 
@@ -354,214 +560,416 @@
 
 <body>
 
-  <!-- Main Navigation -->
-  <div class="top-menu">
-    <a class="nav-brand" href="#home">Ali Taxis edfaedsfaed</a>
+  <!-- Header -->
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Ali Taxis home">
+        <img src="logo.png" alt="Ali Taxis logo"
+             onerror="this.style.display='none'">
+        <span class="brand-text">Ali <span>Taxis</span></span>
+      </a>
 
-    <button
-      class="menu-toggle"
-      type="button"
-      aria-label="Open navigation"
-      aria-expanded="false"
-      aria-controls="main-nav">
-      ☰
-    </button>
+      <button class="menu-toggle"
+              id="menuToggle"
+              type="button"
+              aria-controls="mainMenu"
+              aria-expanded="false">
+        ☰ Menu
+      </button>
 
-    <nav id="main-nav" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#airports">Airport Prices</a>
-      <a href="#areas">Areas Covered</a>
-      <a href="#reviews">Google Reviews</a>
-      <a href="#contact">Contact</a>
-      <a href="https://www.alitaxis.co.uk/restore"
-         target="_blank"
-         rel="noopener noreferrer">Restore</a>
-    </nav>
-  </div>
-
-  <!-- Home Header -->
-  <header id="home">
-    <img
-      src="logo.png"
-      alt="Ali Taxis Logo"
-      class="logo">
-
-    <p class="tagline">
-      Reliable Airport Transfers around Paddock Wood
-      and Surrounding Areas
-    </p>
-
-    <a
-      href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20I%20would%20like%20an%20airport%20transfer%20quote."
-      class="btn">
-      💬 WhatsApp Us
-    </a>
-
-    <a
-      href="mailto:AliTaxisTW@gmail.com?subject=Airport%20Transfer%20Enquiry"
-      class="btn">
-      ✉️ Email Us
-    </a>
+      <nav id="mainMenu" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="services.html">Services</a>
+        <a href="airports.html">Airport Prices</a>
+        <a href="areas.html">Areas Covered</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-book"
+           href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20I%20would%20like%20to%20request%20a%20quote."
+           target="_blank"
+           rel="noopener noreferrer">Book a Taxi</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Services -->
-  <section id="services" class="container">
-    <h2>Airport Transfers</h2>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="eyebrow">Paddock Wood &amp; surrounding areas</div>
 
-    <p class="about">
-      Ali Taxis provides reliable airport transfers from
-      Paddock Wood, Pembury, Five Oak Green, Horsmonden,
-      Goudhurst and surrounding areas. Enjoy professional,
-      friendly service and comfortable journeys to Heathrow,
-      Gatwick, Stansted, Luton and London City Airport.
-    </p>
-  </section>
+        <h1>
+          Your Local Taxi Service for
+          <span>Every Journey</span>
+        </h1>
 
-  <!-- Airport Prices -->
-  <section id="airports" class="container">
-    <h2>Airport Prices From Paddock Wood</h2>
+        <p>
+          Welcome to Ali Taxis. Book airport transfers, long-distance
+          journeys, train station transfers and local taxi journeys from
+          Paddock Wood, Pembury and nearby villages.
+          Contact us for a quote and to confirm your journey.
+        </p>
 
-    <p class="price-note">
-      The following prices are for journeys in a standard car
-      from or to Paddock Wood. Please contact us for prices
-      from other locations. Airport charges are not included.
-      Night premiums may apply. Bigger vehicles are available
-      on request. Full pricing will be confirmed at booking.
-    </p>
+        <div class="button-group">
+          <a class="button button-gold"
+             href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20I%20would%20like%20to%20request%20a%20quote."
+             target="_blank"
+             rel="noopener noreferrer">
+            Book via WhatsApp
+          </a>
 
-    <table class="price-table">
-      <thead>
-        <tr>
-          <th scope="col">Airport</th>
-          <th scope="col">Price From</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Heathrow Airport</td>
-          <td>£125</td>
-        </tr>
-        <tr>
-          <td>Gatwick Airport</td>
-          <td>£85</td>
-        </tr>
-        <tr>
-          <td>London City Airport</td>
-          <td>£115</td>
-        </tr>
-        <tr>
-          <td>Stansted Airport</td>
-          <td>£140</td>
-        </tr>
-        <tr>
-          <td>Luton Airport</td>
-          <td>£180</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+          <a class="button button-outline" href="airports.html">
+            View Airport Prices
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <!-- Areas Covered -->
-  <section id="areas" class="container">
-    <h2>Areas We Cover</h2>
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Our <span class="gold">Taxi Services</span></h2>
+          <p>
+            Reliable transport for airport journeys, local trips and longer
+            journeys. Contact us to discuss your pickup time and destination.
+          </p>
+          <div class="gold-line"></div>
+        </div>
 
-    <p class="about">
-      We serve Paddock Wood, Pembury, Five Oak Green,
-      Horsmonden, Goudhurst and surrounding areas in Kent.
-      Contact Ali Taxis for a quote for your local journey
-      or airport transfer.
-    </p>
-  </section>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">✈</div>
+            <h3>Airport Transfers</h3>
+            <p>
+              Transfers to Heathrow, Gatwick, London City, Stansted and Luton.
+              Request a quote for your airport journey.
+            </p>
+          </article>
 
-  <!-- Google Reviews -->
-  <section id="reviews" class="container reviews-section">
-    <h2>Google Reviews</h2>
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">🚆</div>
+            <h3>Train Station Transfers</h3>
+            <p>
+              Arrange transport to and from train stations for your commute,
+              connections and onward journeys.
+            </p>
+          </article>
 
-    <div class="review-card">
-      <p class="google-label">
-        Ali Taxis – Paddock Wood &amp; Pembury
-      </p>
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">🚖</div>
+            <h3>Local Taxi Journeys</h3>
+            <p>
+              Local journeys around Paddock Wood, Pembury and surrounding
+              villages. Contact us to check availability.
+            </p>
+          </article>
 
-      <p>
-        Thinking of travelling with Ali Taxis?
-        Read customer feedback on our Google business listing.
-        We appreciate your feedback and support.
-      </p>
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">🛣</div>
+            <h3>Long-Distance Travel</h3>
+            <p>
+              Need to travel further afield? Send us your destination and
+              preferred pickup time for a quote.
+            </p>
+          </article>
 
-      <a
-        class="btn"
-        href="https://www.google.com/maps/place/Ali+Taxis+-+Paddock+Wood+%7C+Pembury+%7C+TW/@51.1880533,0.3468931,13.04z/data=!4m10!1m2!2m1!1sali+taxis!3m6!1s0xa13517d8e55cc00f:0x655776e9e0c4cbf6!8m2!3d51.1818386!4d0.3893322!15sCglhbGkgdGF4aXNaCyIJYWxpIHRheGlzkgEMdGF4aV9zZXJ2aWNlmgEgQ2hSRFNVaE5NRzluUzBWSlEwRm5TVU5PZFRaWlJSQULgAQD6AQQIABBA!16s%2Fg%2F11l6lj62sd"
-        target="_blank"
-        rel="noopener noreferrer">
-        ⭐ Read Our Google Reviews
-      </a>
-    </div>
-  </section>
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">👥</div>
+            <h3>Six-Seater Vehicle Requests</h3>
+            <p>
+              Need extra passenger space? Ask about availability of a larger
+              vehicle when requesting your booking.
+            </p>
+          </article>
 
-  <!-- Contact -->
-  <section id="contact" class="container contact">
-    <h2>Contact Ali Taxis</h2>
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">📅</div>
+            <h3>Pre-Booked Journeys</h3>
+            <p>
+              Contact us in advance with your travel details so we can confirm
+              availability and the fare for your journey.
+            </p>
+          </article>
+        </div>
 
-    <p>
-      📱 WhatsApp:
-      <a href="https://wa.me/447396736270">07396 736270</a>
-    </p>
+        <div class="center-action">
+          <a class="button button-outline" href="services.html">
+            Explore Our Services
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      ✉️ Email:
-      <a href="mailto:AliTaxisTW@gmail.com">
-        AliTaxisTW@gmail.com
-      </a>
-    </p>
+    <!-- Airport prices -->
+    <section class="prices-section" id="airport-prices">
+      <div class="container">
+        <div class="section-heading">
+          <h2><span class="gold">Airport Transfer</span> Prices</h2>
+          <p>
+            Indicative standard-car fares from or to Paddock Wood.
+            Contact Ali Taxis to confirm your exact journey price.
+          </p>
+          <div class="gold-line"></div>
+        </div>
 
-    <p>
-      Serving Paddock Wood, Pembury, Five Oak Green,
-      Horsmonden, Goudhurst and surrounding areas.
-    </p>
+        <div class="table-wrap">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th scope="col">Airport</th>
+                <th scope="col">Indicative fare</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>London Gatwick Airport</td>
+                <td>£85</td>
+              </tr>
+              <tr>
+                <td>London Heathrow Airport</td>
+                <td>£125</td>
+              </tr>
+              <tr>
+                <td>London City Airport</td>
+                <td>£115</td>
+              </tr>
+              <tr>
+                <td>London Stansted Airport</td>
+                <td>£140</td>
+              </tr>
+              <tr>
+                <td>London Luton Airport</td>
+                <td>£180</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-    <p style="margin-top: 20px;">
-      <a href="terms.html">Terms &amp; Conditions</a>
-    </p>
-  </section>
+        <p class="price-note">
+          Prices are indicative standard-car fares for journeys to or from
+          Paddock Wood. Airport charges are excluded. Night-time premiums may
+          apply. Larger vehicles may be available on request. Your full fare
+          will be confirmed when booking. Please confirm whether the displayed
+          fare applies to your exact pickup and destination.
+        </p>
+
+        <div class="center-action">
+          <a class="button button-gold" href="airports.html">
+            All Airport Prices
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose us -->
+    <section>
+      <div class="container">
+        <div class="section-heading">
+          <h2>Why Choose <span class="gold">Ali Taxis?</span></h2>
+          <p>
+            A straightforward way to arrange your next taxi journey.
+          </p>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <h3>Direct Contact</h3>
+            <p>
+              Speak to us directly on WhatsApp or email to discuss your
+              journey and booking requirements.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Upfront Fare Confirmation</h3>
+            <p>
+              Ask for your fare before travelling so the price and any
+              additional charges can be clarified.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Local Coverage</h3>
+            <p>
+              Serving Paddock Wood and nearby areas, with airport and
+              long-distance journeys available by arrangement.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Areas covered -->
+    <section class="areas-section" id="areas">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Areas <span class="gold">We Cover</span></h2>
+          <p>
+            Based around Paddock Wood, with journeys to airports, stations
+            and destinations further afield.
+          </p>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="area-list">
+          <span class="area-tag">Paddock Wood</span>
+          <span class="area-tag">Pembury</span>
+          <span class="area-tag">Five Oak Green</span>
+          <span class="area-tag">Horsmonden</span>
+          <span class="area-tag">Goudhurst</span>
+        </div>
+
+        <div class="center-action">
+          <a class="button button-outline" href="areas.html">
+            View Areas Covered
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking call to action -->
+    <section class="booking-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Ready to Book Your <span class="gold">Journey?</span></h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <p>
+          Message Ali Taxis with your pickup location, destination, travel
+          date, pickup time and number of passengers. We will confirm
+          availability and the fare.
+        </p>
+
+        <div class="button-group">
+          <a class="button button-gold"
+             href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20please%20quote%20for%20a%20journey.%0APickup%3A%20%0ADestination%3A%20%0ADate%3A%20%0ATime%3A%20%0APassengers%3A%20"
+             target="_blank"
+             rel="noopener noreferrer">
+            Message on WhatsApp
+          </a>
+
+          <a class="button button-outline"
+             href="contact.html">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Contact <span class="gold">Ali Taxis</span></h2>
+          <p>
+            Get in touch to request a quote or arrange your next journey.
+          </p>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <article class="contact-card">
+            <div class="card-icon" aria-hidden="true">☎</div>
+            <h3>Phone / WhatsApp</h3>
+            <p>
+              <a href="tel:+447396736270">07396 736270</a>
+            </p>
+            <p>
+              <a href="https://wa.me/447396736270"
+                 target="_blank"
+                 rel="noopener noreferrer">Open WhatsApp</a>
+            </p>
+          </article>
+
+          <article class="contact-card">
+            <div class="card-icon" aria-hidden="true">✉</div>
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:AliTaxisTW@gmail.com">
+                AliTaxisTW@gmail.com
+              </a>
+            </p>
+          </article>
+
+          <article class="contact-card">
+            <div class="card-icon" aria-hidden="true">📍</div>
+            <h3>Find Us on Google</h3>
+            <p>
+              <a href="https://www.google.com/maps/place/Ali+Taxis+-+Paddock+Wood+%7C+Pembury+%7C+TW/@51.1880533,0.3468931,13.04z/data=!4m10!1m2!2m1!1sali+taxis!3m6!1s0xa13517d8e55cc00f:0x655776e9e0c4cbf6!8m2!3d51.1818386!4d0.3893322!15sCglhbGkgdGF4aXNaCyIJYWxpIHRheGlzkgEMdGF4aV9zZXJ2aWNlmgEgQ2hSRFNVaE5NRzluUzBWSlEwRm5TVU5PZFRaWlJSQULgAQD6AQQIABBA!16s%2Fg%2F11l6lj62sd?entry=ttu"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View Google Business Listing
+              </a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
-    © 2026 Ali Taxis | Airport Transfers Paddock Wood
+    <div class="container">
+      <a class="brand" href="index.html"
+         style="justify-content:center; margin-bottom:10px;">
+        <span class="brand-text">Ali <span>Taxis</span></span>
+      </a>
+
+      <p>Airport Transfers · Long Distance · Train Stations · Local Journeys</p>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="airports.html">Airport Prices</a>
+        <a href="areas.html">Areas Covered</a>
+        <a href="reviews.html">Google Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+
+      <p>
+        WhatsApp:
+        <a href="https://wa.me/447396736270"
+           style="color:var(--gold);">07396 736270</a>
+        ·
+        <a href="mailto:AliTaxisTW@gmail.com"
+           style="color:var(--gold);">AliTaxisTW@gmail.com</a>
+      </p>
+
+      <p>&copy; <span id="currentYear"></span> Ali Taxis. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- Floating WhatsApp -->
-  <a
-    href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20I%20would%20like%20an%20airport%20transfer%20quote."
-    class="floating-whatsapp"
-    aria-label="Contact Ali Taxis on WhatsApp">
-    💬 WhatsApp
+  <!-- Floating WhatsApp button -->
+  <a class="whatsapp-float"
+     href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20I%20would%20like%20to%20request%20a%20quote."
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Request a taxi quote on WhatsApp">
+    WhatsApp Booking
   </a>
 
-  <!-- Mobile Navigation Script -->
   <script>
-    const menuButton = document.querySelector(".menu-toggle");
-    const navigation = document.querySelector("#main-nav");
+    const menuToggle = document.getElementById("menuToggle");
+    const mainMenu = document.getElementById("mainMenu");
 
-    menuButton.addEventListener("click", function () {
-      const isOpen = navigation.classList.toggle("open");
-
-      menuButton.setAttribute("aria-expanded", String(isOpen));
-      menuButton.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation" : "Open navigation"
-      );
-      menuButton.textContent = isOpen ? "✕" : "☰";
+    menuToggle.addEventListener("click", function () {
+      const isOpen = mainMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
-    navigation.querySelectorAll("a").forEach(function (link) {
+    mainMenu.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        navigation.classList.remove("open");
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.setAttribute("aria-label", "Open navigation");
-        menuButton.textContent = "☰";
+        mainMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
       });
     });
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
   </script>
 
 </body>
