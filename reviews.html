@@ -1,1 +1,456 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Reviews | Ali Taxis Paddock Wood</title>
+
+    <meta name="description" content="Read customer reviews and share your experience with Ali Taxis. Local taxi journeys and airport transfers from Paddock Wood, Pembury, Five Oak Green, Horsmonden and Goudhurst.">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://alitaxis.co.uk/reviews.html">
+
+    <meta property="og:title" content="Customer Reviews | Ali Taxis">
+    <meta property="og:description" content="Discover customer feedback and leave a Google review for Ali Taxis in Paddock Wood and surrounding areas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alitaxis.co.uk/reviews.html">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #080808;
+            text-align: center;
+            padding: 20px 20px 30px;
+            border-bottom: 1px solid #d4af37;
+        }
+
+        .navbar {
+            max-width: 1100px;
+            margin: 0 auto 22px;
+            position: relative;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px 32px;
+        }
+
+        .nav-menu a {
+            display: inline-block;
+            padding: 8px 3px;
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a:focus {
+            color: #fff;
+        }
+
+        .nav-menu a[aria-current="page"] {
+            color: #f4d03f;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: linear-gradient(135deg, #d4af37, #f4d03f);
+            color: #000;
+            border: 1px solid #d4af37;
+            border-radius: 6px;
+            padding: 10px 18px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .tagline {
+            margin: 20px auto;
+            max-width: 800px;
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4af37, #f4d03f);
+            color: #000;
+            text-decoration: none;
+            padding: 13px 23px;
+            margin: 8px;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 1px solid #d4af37;
+            transition: 0.3s;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            background: linear-gradient(135deg, #f4d03f, #ffd700);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #d4af37;
+            margin-bottom: 25px;
+            line-height: 1.35;
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 30px;
+        }
+
+        .review-card {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 25px;
+            background: #0b0b0b;
+            border: 1px solid #55451b;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .review-card h2 {
+            margin-bottom: 15px;
+        }
+
+        .stars {
+            color: #d4af37;
+            font-size: 2rem;
+            letter-spacing: 5px;
+            margin: 12px 0;
+        }
+
+        .review-card p {
+            margin-bottom: 15px;
+        }
+
+        .review-note {
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .review-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .review-actions .btn {
+            margin: 5px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .info-card {
+            background: #0b0b0b;
+            border: 1px solid #55451b;
+            border-radius: 10px;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        .info-card h3 {
+            color: #d4af37;
+            margin-bottom: 12px;
+        }
+
+        .info-card p {
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 30px;
+            border-top: 1px solid #333;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        .floating-whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            background: linear-gradient(135deg, #d4af37, #f4d03f);
+            color: #000;
+            padding: 14px 19px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .floating-whatsapp:hover {
+            background: #ffd700;
+        }
+
+        @media (max-width: 650px) {
+            header {
+                padding: 15px 15px 25px;
+            }
+
+            .navbar {
+                margin-bottom: 18px;
+            }
+
+            .menu-toggle {
+                display: inline-block;
+                margin: 0 auto;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                margin-top: 12px;
+                padding: 8px 0;
+                border-top: 1px solid #55451b;
+            }
+
+            .nav-menu.open {
+                display: flex;
+            }
+
+            .nav-menu li {
+                width: 100%;
+            }
+
+            .nav-menu a {
+                display: block;
+                width: 100%;
+                padding: 11px;
+            }
+
+            .nav-menu a[aria-current="page"] {
+                border-bottom: none;
+            }
+
+            .tagline {
+                font-size: 1.05rem;
+                margin: 18px auto;
+            }
+
+            .container {
+                padding: 35px 18px;
+            }
+
+            .review-card {
+                padding: 25px 18px;
+            }
+
+            .floating-whatsapp {
+                right: 12px;
+                bottom: 12px;
+                padding: 12px 15px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar" aria-label="Main navigation">
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="navMenu">
+            ☰ Menu
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="local.html">Local Taxi Journeys</a></li>
+            <li><a href="airports.html">Airport Transfers</a></li>
+            <li><a href="reviews.html" aria-current="page">Reviews</a></li>
+            <li><a href="legal.html">Legal</a></li>
+        </ul>
+
+    </nav>
+
+    <p class="tagline">
+        Customer Reviews • Ali Taxis
+    </p>
+
+</header>
+
+<main>
+
+    <section class="container">
+
+        <h1>Customer Reviews</h1>
+
+        <p class="intro">
+            At Ali Taxis, we aim to provide a reliable, friendly and
+            professional taxi service for local journeys and airport
+            transfers. Your feedback helps us improve our service and
+            helps other passengers choose their taxi provider.
+        </p>
+
+        <div class="review-card">
+
+            <h2>Ali Taxis on Google</h2>
+
+            <div class="stars" aria-label="Google review information">
+                ★★★★★
+            </div>
+
+            <p>
+                Have you travelled with Ali Taxis? Read customer feedback
+                on Google or share your own experience.
+            </p>
+
+            <p class="review-note">
+                Google reviews and ratings are displayed on Google's
+                platform. Please use the buttons below to view the
+                latest reviews or write a review.
+            </p>
+
+            <div class="review-actions">
+
+                <a
+                    href="https://www.google.com/maps/place/Ali+Taxis+-+Paddock+Wood+%7C+Pembury+%7C+TW/@51.1880533,0.3468931,13.04z/data=!4m10!1m2!2m1!1sali+taxis!3m6!1s0xa13517d8e55cc"
+                    class="btn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Read Google Reviews
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container contact">
+
+        <h2>Thank You for Your Feedback</h2>
+
+        <p>
+            Thank you to everyone who chooses Ali Taxis. If you have
+            travelled with us, we welcome your honest feedback on Google.
+        </p>
+
+        <p>
+            <a
+                href="mailto:AliTaxisTW@gmail.com?subject=Feedback%20for%20Ali%20Taxis"
+                class="btn">
+                ✉️ Send Feedback by Email
+            </a>
+        </p>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>© <span id="year"></span> Ali Taxis | Local Taxis &amp; Airport Transfers</p>
+
+</footer>
+
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", function () {
+        const isOpen = navMenu.classList.toggle("open");
+
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.textContent = isOpen ? "✕ Close Menu" : "☰ Menu";
+    });
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
