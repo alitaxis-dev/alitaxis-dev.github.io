@@ -168,11 +168,15 @@
             box-shadow: 0 6px 20px rgba(212, 175, 55, 0.06);
         }
 
+        /* More prominent Airport Prices heading */
         .pricing-section h2 {
-            color: var(--gold);
-            font-size: 28px;
+            color: var(--light-gold);
+            font-size: clamp(30px, 5vw, 38px);
+            font-weight: 900;
             margin-top: 0;
-            margin-bottom: 22px;
+            margin-bottom: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* Prominent pickup-area heading */
@@ -187,6 +191,8 @@
             font-size: clamp(19px, 3.5vw, 25px);
             font-weight: 800;
             line-height: 1.4;
+            text-transform: none;
+            letter-spacing: 0;
         }
 
         /* Pricing introduction */
@@ -214,46 +220,67 @@
             color: var(--white);
         }
 
+        /* More noticeable airport pricing table */
         .table-container {
             width: 100%;
             overflow-x: auto;
-            border-radius: 6px;
+            border: 2px solid var(--gold);
+            border-radius: 9px;
+            background: var(--dark);
         }
 
         .airport-prices {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 0;
             text-align: left;
+            background: var(--dark);
         }
 
         .airport-prices th {
             background: var(--gold);
             color: var(--black);
-            padding: 15px;
-            font-size: 16px;
-            font-weight: 800;
+            padding: 17px 15px;
+            font-size: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .airport-prices th:last-child,
-        .airport-prices td:last-child {
-            text-align: right;
+        .airport-prices th:last-child {
+            text-align: center;
         }
 
         .airport-prices td {
-            padding: 15px;
+            padding: 19px 15px;
             border-bottom: 1px solid var(--border);
             color: var(--white);
+            font-size: 19px;
+            font-weight: 800;
+            line-height: 1.4;
         }
 
+        /* Larger gold fares */
         .airport-prices td:last-child {
+            width: 135px;
+            text-align: center;
             color: var(--light-gold);
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 27px;
+            font-weight: 900;
             white-space: nowrap;
         }
 
+        /* Subtle alternating rows */
+        .airport-prices tbody tr:nth-child(even) {
+            background: #211e14;
+        }
+
         .airport-prices tbody tr:hover {
-            background: #202020;
+            background: #302817;
+        }
+
+        .airport-prices tbody tr:last-child td {
+            border-bottom: none;
         }
 
         /* Important pricing information */
@@ -404,7 +431,7 @@
             }
 
             .pricing-section h2 {
-                font-size: 24px;
+                font-size: 29px;
             }
 
             .pricing-section h2 .pricing-location {
@@ -420,14 +447,19 @@
                 font-size: 16px;
             }
 
-            .airport-prices th,
+            .airport-prices th {
+                padding: 15px 9px;
+                font-size: 15px;
+            }
+
             .airport-prices td {
-                padding: 12px 9px;
-                font-size: 14px;
+                padding: 17px 10px;
+                font-size: 16px;
             }
 
             .airport-prices td:last-child {
-                font-size: 16px;
+                width: 100px;
+                font-size: 23px;
             }
 
             .pricing-notes {
@@ -440,6 +472,23 @@
 
             .button {
                 max-width: 100%;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .airport-prices th {
+                padding: 13px 7px;
+                font-size: 13px;
+            }
+
+            .airport-prices td {
+                padding: 15px 7px;
+                font-size: 14px;
+            }
+
+            .airport-prices td:last-child {
+                width: 85px;
+                font-size: 21px;
             }
         }
     </style>
