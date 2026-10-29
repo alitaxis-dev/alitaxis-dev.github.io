@@ -1,11 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Airport Transfers | Ali Taxis | Paddock Wood</title>
+
     <meta name="description" content="Reliable airport transfers from Paddock Wood, Pembury, Five Oak Green, Horsmonden, Goudhurst and surrounding areas. Starting prices for Heathrow, Gatwick, Stansted, Luton and London City Airport.">
+
     <link rel="canonical" href="https://alitaxis.co.uk/airports.html">
+
     <style>
         :root {
             --black: #080808;
@@ -16,12 +21,15 @@
             --grey: #cccccc;
             --border: #393326;
         }
+
         * {
             box-sizing: border-box;
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         body {
             margin: 0;
             background: var(--black);
@@ -29,19 +37,23 @@
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
         }
+
         a {
             color: var(--gold);
             text-decoration: none;
         }
+
         a:hover {
             color: var(--light-gold);
         }
+
         /* Navigation */
         .navbar {
             background: #111111;
             border-bottom: 1px solid var(--gold);
             padding: 14px 20px;
         }
+
         .nav-menu {
             display: flex;
             justify-content: center;
@@ -52,18 +64,22 @@
             padding: 0;
             margin: 0;
         }
+
         .nav-menu a {
             color: var(--gold);
             font-weight: bold;
             font-size: 15px;
             transition: color 0.2s ease;
         }
+
         .nav-menu a:hover {
             color: var(--white);
         }
+
         .nav-menu a[aria-current="page"] {
             color: var(--white);
         }
+
         .menu-toggle {
             display: none;
             background: transparent;
@@ -74,16 +90,19 @@
             cursor: pointer;
             border-radius: 4px;
         }
+
         /* Header */
         header {
             text-align: center;
             padding: 30px 20px 35px;
         }
+
         .tagline {
             color: var(--gold);
             font-size: 18px;
             margin: 0 auto 22px;
         }
+
         .contact-buttons {
             display: flex;
             justify-content: center;
@@ -91,6 +110,7 @@
             flex-wrap: wrap;
             gap: 12px;
         }
+
         .button {
             display: inline-block;
             background: var(--gold);
@@ -101,34 +121,41 @@
             text-align: center;
             transition: background 0.2s ease;
         }
+
         .button:hover {
             background: var(--light-gold);
             color: var(--black);
         }
+
         /* Main content */
         main {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px 45px;
         }
+
         .page-heading {
             text-align: center;
             margin: 10px 0 35px;
         }
+
         h1, h2, h3 {
             color: var(--gold);
             line-height: 1.3;
         }
+
         h1 {
             font-size: clamp(30px, 5vw, 44px);
             margin-bottom: 15px;
         }
+
         .intro {
             color: var(--grey);
             max-width: 850px;
             margin: 0 auto;
             font-size: 17px;
         }
+
         /* Airport pricing */
         .pricing-section {
             max-width: 900px;
@@ -140,92 +167,165 @@
             text-align: center;
             box-shadow: 0 6px 20px rgba(212, 175, 55, 0.06);
         }
+
         .pricing-section h2 {
             color: var(--gold);
             font-size: 28px;
             margin-top: 0;
+            margin-bottom: 22px;
         }
+
+        /* Prominent pickup-area heading */
+        .pricing-section h2 .pricing-location {
+            display: block;
+            margin-top: 12px;
+            padding: 12px 10px;
+            background: var(--black);
+            border: 2px solid var(--gold);
+            border-radius: 6px;
+            color: var(--light-gold);
+            font-size: clamp(19px, 3.5vw, 25px);
+            font-weight: 800;
+            line-height: 1.4;
+        }
+
+        /* Pricing introduction */
         .pricing-intro {
-            color: var(--grey);
-            margin-bottom: 25px;
+            margin: 22px 0 25px;
+            padding: 18px 16px;
+            background: #19170f;
+            border: 2px solid var(--gold);
+            border-radius: 8px;
+            text-align: center;
         }
+
         .pricing-intro p {
-            margin: 7px 0;
+            margin: 8px 0;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 1.5;
         }
+
+        .location-notice {
+            color: var(--light-gold);
+        }
+
+        .standard-car-notice {
+            color: var(--white);
+        }
+
         .table-container {
             width: 100%;
             overflow-x: auto;
+            border-radius: 6px;
         }
+
         .airport-prices {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
         }
+
         .airport-prices th {
             background: var(--gold);
             color: var(--black);
             padding: 15px;
             font-size: 16px;
+            font-weight: 800;
         }
+
+        .airport-prices th:last-child,
+        .airport-prices td:last-child {
+            text-align: right;
+        }
+
         .airport-prices td {
             padding: 15px;
             border-bottom: 1px solid var(--border);
             color: var(--white);
         }
+
         .airport-prices td:last-child {
-            color: var(--gold);
+            color: var(--light-gold);
             font-size: 18px;
             font-weight: bold;
             white-space: nowrap;
         }
+
         .airport-prices tbody tr:hover {
             background: #202020;
         }
-        /* Prominent pricing information */
+
+        /* Important pricing information */
         .pricing-notes {
-            margin: 28px 0 22px;
-            padding: 22px 20px;
+            margin: 25px 0 22px;
+            padding: 20px;
             background: #19170f;
             border: 2px solid var(--gold);
             border-radius: 8px;
             color: var(--white);
-            font-size: 16px;
+            font-size: 15px;
+            text-align: left;
+        }
+
+        .pricing-notes h3 {
+            margin: 0 0 14px;
+            color: var(--light-gold);
+            font-size: 22px;
             text-align: center;
         }
+
         .pricing-notes p {
-            margin: 12px 0;
-            font-weight: 600;
+            margin: 9px 0;
+            padding-bottom: 9px;
+            border-bottom: 1px solid var(--border);
         }
-        .pricing-notes .pricing-notes-heading {
-            background: var(--gold);
-            color: var(--black);
-            padding: 15px 12px;
-            margin: -22px -20px 18px;
-            border-radius: 5px 5px 0 0;
-            font-size: clamp(18px, 4vw, 23px);
-            font-weight: 800;
-            line-height: 1.3;
+
+        .pricing-notes p:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
         }
-        .pricing-notes .pricing-notes-final {
+
+        .pricing-notes p:first-of-type {
             color: var(--light-gold);
+            font-size: 16px;
             font-weight: 800;
-            font-size: 17px;
         }
+
         .pricing-cta {
             margin-top: 25px;
         }
+
         /* Service information */
         .content-section {
             max-width: 850px;
             margin: 40px auto;
         }
+
         .content-section h2 {
             text-align: center;
             margin-bottom: 18px;
         }
+
         .content-section p {
             color: var(--grey);
         }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background: var(--dark);
+            border-left: 3px solid var(--gold);
+            color: var(--white);
+            border-radius: 3px;
+        }
+
         /* Booking section */
         .booking-panel {
             background: var(--dark);
@@ -235,12 +335,15 @@
             text-align: center;
             margin-top: 40px;
         }
+
         .booking-panel h2 {
             margin-top: 0;
         }
+
         .booking-panel p {
             color: var(--grey);
         }
+
         /* Footer */
         footer {
             text-align: center;
@@ -250,77 +353,103 @@
             color: var(--grey);
             font-size: 14px;
         }
+
         footer p {
             margin: 5px 0;
         }
+
         footer a {
             color: var(--gold);
         }
+
         /* Mobile layout */
         @media (max-width: 700px) {
             .navbar {
                 padding: 12px 16px;
             }
+
             .menu-toggle {
                 display: block;
                 margin: 0 auto;
             }
+
             .nav-menu {
                 display: none;
                 flex-direction: column;
                 gap: 0;
                 padding-top: 12px;
             }
+
             .nav-menu.open {
                 display: flex;
             }
+
             .nav-menu li {
                 width: 100%;
                 text-align: center;
                 padding: 11px 0;
                 border-top: 1px solid #30291a;
             }
+
             header {
                 padding: 24px 15px 30px;
             }
+
             .tagline {
                 font-size: 16px;
             }
+
             .pricing-section {
                 padding: 22px 14px;
             }
+
             .pricing-section h2 {
                 font-size: 24px;
             }
+
+            .pricing-section h2 .pricing-location {
+                font-size: 19px;
+                padding: 12px 8px;
+            }
+
+            .pricing-intro {
+                padding: 15px 12px;
+            }
+
+            .pricing-intro p {
+                font-size: 16px;
+            }
+
             .airport-prices th,
             .airport-prices td {
                 padding: 12px 9px;
                 font-size: 14px;
             }
+
             .airport-prices td:last-child {
                 font-size: 16px;
             }
+
             .pricing-notes {
-                padding: 18px 14px;
-                font-size: 15px;
+                padding: 16px 13px;
             }
-            .pricing-notes .pricing-notes-heading {
-                margin: -18px -14px 16px;
-                padding: 14px 8px;
-                font-size: 18px;
+
+            .pricing-notes h3 {
+                font-size: 20px;
             }
-            .pricing-notes .pricing-notes-final {
-                font-size: 16px;
-            }
+
             .button {
                 max-width: 100%;
             }
         }
     </style>
 </head>
+
 <body>
+
     <!-- Navigation -->
     <nav class="navbar" aria-label="Main navigation">
+
         <button
             class="menu-toggle"
             id="menuToggle"
@@ -329,31 +458,40 @@
             type="button">
             ☰ Menu
         </button>
+
         <ul class="nav-menu" id="navMenu">
             <li>
                 <a href="index.html">Home</a>
             </li>
+
             <li>
                 <a href="local.html">Local Taxi Journeys</a>
             </li>
+
             <li>
                 <a href="airports.html" aria-current="page">
                     Airport Transfers
                 </a>
             </li>
+
             <li>
                 <a href="reviews.html">Reviews</a>
             </li>
+
             <li>
                 <a href="legal.html">Legal</a>
             </li>
         </ul>
+
     </nav>
+
     <!-- Header -->
     <header>
+
         <p class="tagline">
             Airport Transfers • Paddock Wood and Surrounding Areas
         </p>
+
         <div class="contact-buttons">
             <a
                 class="button"
@@ -361,12 +499,17 @@
                 WhatsApp to Book
             </a>
         </div>
+
     </header>
+
     <!-- Main content -->
     <main>
+
         <!-- Airport introduction -->
         <section class="page-heading">
+
             <h1>Airport Transfers</h1>
+
             <p class="intro">
                 Ali Taxis provides reliable airport transfers from
                 Paddock Wood, Pembury, Five Oak Green, Horsmonden,
@@ -374,71 +517,102 @@
                 service with fixed prices and comfortable journeys to
                 Heathrow, Gatwick, Stansted, Luton and London City Airport.
             </p>
+
         </section>
+
         <!-- Airport prices -->
-        <section class="pricing-section" aria-labelledby="airport-pricing-title">
+        <section
+            class="pricing-section"
+            aria-labelledby="airport-pricing-title">
+
             <h2 id="airport-pricing-title">
                 Airport Prices
-                <span style="display: block; font-size: 20px; margin-top: 6px;">
-                    Paddock Wood
+                <span class="pricing-location">
+                    Paddock Wood, Brenchley &amp; Matfield
                 </span>
             </h2>
+
             <div class="pricing-intro">
-                <p>Please contact us for prices from other locations.</p>
-                <p>The following prices are for a Standard Car.</p>
-                <p>Journeys to and from Paddock Wood.</p>
+
+                <p class="location-notice">
+                    <strong>
+                        Please contact us for prices from other locations.
+                    </strong>
+                </p>
+
+                <p class="standard-car-notice">
+                    <strong>
+                        The following prices are for a Standard Car.
+                    </strong>
+                </p>
+
             </div>
+
             <div class="table-container">
+
                 <table class="airport-prices">
+
                     <thead>
                         <tr>
                             <th scope="col">Airport</th>
-                            <th scope="col">One-Way Fare</th>
+                            <th scope="col">Fare</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         <tr>
                             <td>Heathrow Airport</td>
                             <td>£125</td>
                         </tr>
+
                         <tr>
                             <td>Gatwick Airport</td>
                             <td>£85</td>
                         </tr>
+
                         <tr>
                             <td>London City Airport</td>
                             <td>£115</td>
                         </tr>
+
                         <tr>
                             <td>Stansted Airport</td>
                             <td>£140</td>
                         </tr>
+
                         <tr>
                             <td>Luton Airport</td>
                             <td>£180</td>
                         </tr>
                     </tbody>
+
                 </table>
+
             </div>
-            <!-- Important pricing information -->
+
             <div class="pricing-notes">
-                <p class="pricing-notes-heading">
-                    IMPORTANT PRICING INFORMATION
-                </p>
+
+                <h3>Important Pricing Information</h3>
+
                 <p>
-                    Airport charges are NOT included in the fares shown above.
+                    Airport charges are <strong>NOT included</strong>
+                    in the fares shown above.
                 </p>
-                <p>
-                    Night premiums may apply.
-                </p>
+
+                <p>Night premiums may apply.</p>
+
                 <p>
                     Bigger vehicles are available on request.
                     Additional charges may apply.
                 </p>
-                <p class="pricing-notes-final">
-                    Your full fare will be confirmed at the time of booking.
+
+                <p>
+                    Your full fare will be confirmed at the time
+                    of booking.
                 </p>
+
             </div>
+
             <div class="pricing-cta">
                 <a
                     class="button"
@@ -446,66 +620,94 @@
                     Request an Airport Quote on WhatsApp
                 </a>
             </div>
+
         </section>
+
         <!-- Service information -->
         <section class="content-section">
+
             <h2>Our Airport Transfer Service</h2>
+
             <p>
                 Whether you are travelling for a holiday, business trip
                 or visiting family, contact Ali Taxis to discuss your
                 airport transfer. We provide airport journeys from
                 Paddock Wood and nearby areas.
             </p>
+
             <p>
                 For an accurate quote, please include your pickup address,
                 destination airport, travel date, pickup time and number
                 of passengers in your enquiry.
             </p>
+
         </section>
+
         <!-- Booking -->
         <section class="booking-panel">
+
             <h2>Book Your Airport Transfer</h2>
+
             <p>
                 Contact Ali Taxis by WhatsApp or email with your journey
                 details to request a quote and discuss your booking.
             </p>
+
             <div class="contact-buttons">
+
                 <a
                     class="button"
                     href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20I%20would%20like%20to%20enquire%20about%20an%20airport%20transfer.%20My%20pickup%20location%20is%3A">
                     WhatsApp to Book
                 </a>
+
                 <a
                     class="button"
-                    href="mailto:AliTaxisTW@gmail.com?subject=Airport%20Transfer%20Enquiry&body=Hello%20Ali%20Taxis%2C%0A%0AI%20would%20like%20a%20quote%20for%20an%20airport%20transfer.%0A%0APickup%20location%3A%0ADestination%20airport%3A%0ATravel%20date%3A%0APickup%20time%3A%0ANumber%20of%20passengers%3A%0A%0AThank%20you.">
+                    href="mailto:AliTaxisTW@gmail.com?subject=Airport%20Transfer%20Enquiry&amp;body=Hello%20Ali%20Taxis%2C%0A%0AI%20would%20like%20a%20quote%20for%20an%20airport%20transfer.%0A%0APickup%20location%3A%0ADestination%20airport%3A%0ATravel%20date%3A%0APickup%20time%3A%0ANumber%20of%20passengers%3A%0A%0AThank%20you.">
                     Email to Book
                 </a>
+
             </div>
+
         </section>
+
     </main>
+
     <!-- Footer -->
     <footer>
+
         <p>
             &copy; <span id="year"></span> Ali Taxis.
             All rights reserved.
         </p>
+
         <p>
             <a href="legal.html">Legal Information</a>
         </p>
+
     </footer>
+
     <!-- JavaScript -->
     <script>
         const menuToggle = document.getElementById("menuToggle");
         const navMenu = document.getElementById("navMenu");
+
         menuToggle.addEventListener("click", function () {
             const isOpen = navMenu.classList.toggle("open");
-            menuToggle.setAttribute("aria-expanded", isOpen);
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
             menuToggle.textContent = isOpen
                 ? "✕ Close"
                 : "☰ Menu";
         });
+
         document.getElementById("year").textContent =
             new Date().getFullYear();
     </script>
+
 </body>
 </html>
