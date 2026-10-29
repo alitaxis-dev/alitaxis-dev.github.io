@@ -168,7 +168,7 @@
             box-shadow: 0 6px 20px rgba(212, 175, 55, 0.06);
         }
 
-        /* More prominent Airport Prices heading */
+        /* Fixed Airport Prices heading */
         .pricing-section h2 {
             color: var(--light-gold);
             font-size: clamp(30px, 5vw, 38px);
@@ -179,7 +179,7 @@
             letter-spacing: 1px;
         }
 
-        /* Prominent pickup-area heading */
+        /* Pickup-area heading */
         .pricing-section h2 .pricing-location {
             display: block;
             margin-top: 12px;
@@ -220,7 +220,7 @@
             color: var(--white);
         }
 
-        /* More noticeable airport pricing table */
+        /* Airport pricing table */
         .table-container {
             width: 100%;
             overflow-x: auto;
@@ -260,17 +260,17 @@
             line-height: 1.4;
         }
 
-        /* Larger gold fares */
+        /* Smaller gold fare amounts */
         .airport-prices td:last-child {
             width: 135px;
             text-align: center;
             color: var(--light-gold);
-            font-size: 27px;
+            font-size: 22px;
             font-weight: 900;
             white-space: nowrap;
         }
 
-        /* Subtle alternating rows */
+        /* Alternating rows */
         .airport-prices tbody tr:nth-child(even) {
             background: #211e14;
         }
@@ -283,40 +283,51 @@
             border-bottom: none;
         }
 
-        /* Important pricing information */
+        /* Important Pricing Information */
         .pricing-notes {
-            margin: 25px 0 22px;
-            padding: 20px;
-            background: #19170f;
-            border: 2px solid var(--gold);
-            border-radius: 8px;
+            margin: 28px 0 22px;
+            padding: 24px 22px;
+            background: #111111;
+            border: 1px solid var(--gold);
+            border-radius: 10px;
             color: var(--white);
-            font-size: 15px;
             text-align: left;
         }
 
         .pricing-notes h3 {
-            margin: 0 0 14px;
+            margin: 0 0 22px;
+            padding-bottom: 15px;
             color: var(--light-gold);
-            font-size: 22px;
+            font-size: 23px;
+            font-weight: 900;
             text-align: center;
-        }
-
-        .pricing-notes p {
-            margin: 9px 0;
-            padding-bottom: 9px;
             border-bottom: 1px solid var(--border);
         }
 
-        .pricing-notes p:last-child {
-            padding-bottom: 0;
-            border-bottom: none;
+        .pricing-notes p {
+            margin: 0;
+            padding: 14px 12px;
+            border-bottom: 1px solid var(--border);
+            color: var(--grey);
+            font-size: 15px;
+            line-height: 1.6;
         }
 
+        /* Highlight airport charges */
         .pricing-notes p:first-of-type {
+            margin-bottom: 8px;
+            padding: 15px;
+            background: #19170f;
+            border: 1px solid var(--gold);
+            border-radius: 6px;
             color: var(--light-gold);
             font-size: 16px;
             font-weight: 800;
+        }
+
+        .pricing-notes p:last-child {
+            border-bottom: none;
+            padding-bottom: 5px;
         }
 
         .pricing-cta {
@@ -459,15 +470,19 @@
 
             .airport-prices td:last-child {
                 width: 100px;
-                font-size: 23px;
+                font-size: 20px;
             }
 
             .pricing-notes {
-                padding: 16px 13px;
+                padding: 20px 14px;
             }
 
             .pricing-notes h3 {
-                font-size: 20px;
+                font-size: 21px;
+            }
+
+            .pricing-notes p {
+                padding: 13px 8px;
             }
 
             .button {
@@ -488,7 +503,7 @@
 
             .airport-prices td:last-child {
                 width: 85px;
-                font-size: 21px;
+                font-size: 18px;
             }
         }
     </style>
@@ -575,7 +590,7 @@
             aria-labelledby="airport-pricing-title">
 
             <h2 id="airport-pricing-title">
-                Airport Prices
+                Fixed Airport Prices
                 <span class="pricing-location">
                     Paddock Wood, Brenchley &amp; Matfield
                 </span>
@@ -604,7 +619,7 @@
                     <thead>
                         <tr>
                             <th scope="col">Airport</th>
-                            <th scope="col">Fare</th>
+                            <th scope="col">Fare (from)</th>
                         </tr>
                     </thead>
 
@@ -639,6 +654,7 @@
 
             </div>
 
+            <!-- Important Pricing Information -->
             <div class="pricing-notes">
 
                 <h3>Important Pricing Information</h3>
@@ -648,7 +664,9 @@
                     in the fares shown above.
                 </p>
 
-                <p>Night premiums may apply.</p>
+                <p>
+                    Night premiums may apply.
+                </p>
 
                 <p>
                     Bigger vehicles are available on request.
