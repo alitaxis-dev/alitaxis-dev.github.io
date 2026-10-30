@@ -302,41 +302,60 @@
         /* Important pricing information */
 
         .pricing-notes {
-            margin: 28px 0 22px;
-            padding: 24px 22px;
-            background: #111111;
-            border: 1px solid var(--gold);
-            border-radius: 10px;
-            color: var(--white);
+            margin: 30px 0 22px;
+            padding: 25px 22px;
+            background: #090909;
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            box-shadow: 0 0 18px rgba(212, 175, 55, 0.16);
             text-align: left;
         }
 
         .pricing-notes h3 {
             margin: 0 0 22px;
-            padding-bottom: 15px;
+            padding-bottom: 16px;
             color: var(--light-gold);
-            font-size: 25px;
+            font-size: 26px;
             font-weight: 900;
             text-align: center;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--gold);
         }
 
         .pricing-notes p {
-            margin: 12px 0;
-            padding: 17px 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 14px 0;
+            padding: 19px 18px;
             background: #211C0E;
             border: 1px solid var(--gold);
-            border-left: 5px solid var(--gold);
-            border-radius: 7px;
+            border-left: 6px solid var(--gold);
+            border-radius: 8px;
             color: var(--light-gold);
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 800;
             line-height: 1.6;
         }
 
-        .pricing-notes p:first-of-type {
-            background: #19170F;
+        .pricing-notes p:first-of-type,
+        .pricing-notes p:last-child {
+            background: #30250C;
+        }
+
+        .notice-icon {
+            flex: 0 0 34px;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: var(--light-gold);
+            font-size: 25px;
+            line-height: 1;
+        }
+
+        .notice-text {
+            flex: 1;
         }
 
         .pricing-notes p:last-child {
@@ -490,16 +509,24 @@
             }
 
             .pricing-notes {
-                padding: 20px 14px;
+                padding: 20px 13px;
             }
 
             .pricing-notes h3 {
-                font-size: 21px;
+                font-size: 22px;
             }
 
             .pricing-notes p {
-                padding: 15px 12px;
+                padding: 16px 12px;
                 font-size: 16px;
+                gap: 10px;
+            }
+
+            .notice-icon {
+                flex-basis: 28px;
+                width: 28px;
+                height: 28px;
+                font-size: 22px;
             }
 
             .button {
@@ -522,6 +549,10 @@
             .airport-prices td:last-child {
                 width: 90px;
                 font-size: 16px;
+            }
+
+            .pricing-notes p {
+                font-size: 15px;
             }
         }
 
@@ -673,29 +704,43 @@
 
             <div class="pricing-notes">
 
-                <h3>Important Pricing Information</h3>
+                <h3>⚠ Important Pricing Information</h3>
 
                 <p>
-                    Airport charges are <strong>NOT included</strong>
-                    in the fares shown above.
+                    <span class="notice-icon" aria-hidden="true">⚠</span>
+                    <span class="notice-text">
+                        <strong>
+                            Airport charges are NOT included in the
+                            fares shown above.
+                        </strong>
+                    </span>
                 </p>
 
                 <p>
-                    <strong>Night premiums may apply.</strong>
+                    <span class="notice-icon" aria-hidden="true">◷</span>
+                    <span class="notice-text">
+                        <strong>Night premiums may apply.</strong>
+                    </span>
                 </p>
 
                 <p>
-                    <strong>
-                        Bigger vehicles are available on request.
-                        Additional charges may apply.
-                    </strong>
+                    <span class="notice-icon" aria-hidden="true">🚘</span>
+                    <span class="notice-text">
+                        <strong>
+                            Bigger vehicles are available on request.
+                            Additional charges may apply.
+                        </strong>
+                    </span>
                 </p>
 
                 <p>
-                    <strong>
-                        Your full fare will be confirmed at the time
-                        of booking.
-                    </strong>
+                    <span class="notice-icon" aria-hidden="true">£</span>
+                    <span class="notice-text">
+                        <strong>
+                            Your full fare will be confirmed at the
+                            time of booking.
+                        </strong>
+                    </span>
                 </p>
 
             </div>
@@ -712,7 +757,7 @@
 
         </section>
 
-        <!-- Airport Transfers introduction (moved below prices) -->
+        <!-- Airport Transfers introduction -->
 
         <section class="page-heading">
 
