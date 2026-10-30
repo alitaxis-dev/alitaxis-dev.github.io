@@ -87,7 +87,7 @@
             border-bottom: 1px solid #d4af37;
         }
 
-        /* LOGO: ORIGINAL MAXIMUM WIDTH PRESERVED */
+        /* LOGO */
         .logo {
             display: block;
             max-width: 900px;
@@ -96,57 +96,47 @@
             margin: 0 auto 15px;
         }
 
-        /* GOLD NAVIGATION ABOVE LOGO */
+        /* NAVIGATION - MATCHING LOCAL.HTML */
         .navbar {
-            max-width: 1100px;
-            margin: 0 auto 22px;
+            background: #111111;
+            border-bottom: 1px solid #d4af37;
+            padding: 14px 20px;
+            margin: 0 -20px 22px;
             position: relative;
         }
 
         .nav-menu {
-            list-style: none;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 12px 32px;
+            gap: 28px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
         .nav-menu a {
-            display: inline-block;
-            padding: 8px 3px;
             color: #d4af37;
-            text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s ease;
+            font-size: 15px;
+            text-decoration: none;
+            transition: color 0.2s ease;
         }
 
-        .nav-menu a:hover,
-        .nav-menu a:focus {
-            color: #fff;
-        }
-
-        .nav-menu a[aria-current="page"] {
-            color: #f4d03f;
-            border-bottom: 2px solid #d4af37;
+        .nav-menu a:hover {
+            color: #ffffff;
         }
 
         /* MOBILE MENU BUTTON */
         .menu-toggle {
             display: none;
-            background: linear-gradient(135deg, #d4af37, #f4d03f);
-            color: #000;
+            background: transparent;
             border: 1px solid #d4af37;
-            border-radius: 6px;
-            padding: 10px 18px;
-            font-size: 1rem;
-            font-weight: bold;
+            color: #d4af37;
+            padding: 8px 12px;
+            font-size: 16px;
             cursor: pointer;
-        }
-
-        .menu-toggle:hover,
-        .menu-toggle:focus {
-            background: #ffd700;
         }
 
         .tagline {
@@ -288,31 +278,24 @@
             background: #ffd700;
         }
 
-        /* MOBILE RESPONSIVE DESIGN */
-        @media (max-width: 650px) {
-            header {
-                padding: 15px 15px 25px;
-            }
-
-            /* Logo keeps its 900px maximum and scales to screen width */
+        /* MOBILE NAVIGATION - MATCHING LOCAL.HTML */
+        @media (max-width: 700px) {
 
             .navbar {
+                padding: 12px 16px;
                 margin-bottom: 18px;
             }
 
             .menu-toggle {
-                display: inline-block;
+                display: block;
                 margin: 0 auto;
             }
 
             .nav-menu {
                 display: none;
                 flex-direction: column;
-                align-items: stretch;
                 gap: 0;
-                margin-top: 12px;
-                padding: 8px 0;
-                border-top: 1px solid #55451b;
+                padding-top: 12px;
             }
 
             .nav-menu.open {
@@ -321,16 +304,13 @@
 
             .nav-menu li {
                 width: 100%;
+                text-align: center;
+                padding: 11px 0;
+                border-top: 1px solid #30291a;
             }
 
-            .nav-menu a {
-                display: block;
-                width: 100%;
-                padding: 11px;
-            }
-
-            .nav-menu a[aria-current="page"] {
-                border-bottom: none;
+            header {
+                padding: 15px 15px 25px;
             }
 
             .tagline {
@@ -371,24 +351,40 @@
 
 <header>
 
-    <!-- GOLD NAVIGATION: ABOVE THE LOGO -->
+    <!-- NAVIGATION - MATCHING LOCAL.HTML -->
     <nav class="navbar" aria-label="Main navigation">
 
         <button
             class="menu-toggle"
             id="menuToggle"
-            type="button"
             aria-expanded="false"
-            aria-controls="navMenu">
+            aria-controls="navMenu"
+            type="button">
             ☰ Menu
         </button>
 
         <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="local.html">Local Taxi Journeys</a></li>
-        <li><a href="airports.html">Airport Transfers</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="legal.html">Legal</a></li>
+
+            <li>
+                <a href="index.html" aria-current="page">Home</a>
+            </li>
+
+            <li>
+                <a href="local.html">Local Taxi Journeys</a>
+            </li>
+
+            <li>
+                <a href="airports.html">Airport Transfers</a>
+            </li>
+
+            <li>
+                <a href="reviews.html">Reviews</a>
+            </li>
+
+            <li>
+                <a href="legal.html">Legal</a>
+            </li>
+
         </ul>
 
     </nav>
@@ -442,10 +438,7 @@
                     Travel to local destinations, appointments, shops
                     and other destinations around Kent.
                 </p>
-                <a
-
-                    href="local.html"
-                    class="btn">
+                <a href="local.html" class="btn">
                     Local Trip
                 </a>
             </article>
@@ -548,8 +541,10 @@
     menuToggle.addEventListener("click", function () {
         const isOpen = navMenu.classList.toggle("open");
 
-        menuToggle.setAttribute("aria-expanded", String(isOpen));
-        menuToggle.textContent = isOpen ? "✕ Close Menu" : "☰ Menu";
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.textContent = isOpen
+            ? "✕ Close"
+            : "☰ Menu";
     });
 </script>
 
