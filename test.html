@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Read customer reviews and share your experience with Ali Taxis. Local taxi journeys and airport transfers from Paddock Wood, Pembury, Five Oak Green, Horsmonden and Goudhurst.">
 
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://alitaxis.co.uk/reviews.html">
 
-    <meta property="og:title" content="Customer Reviews | Ali Taxis">
+    <meta property="og:title" content="Customer Reviews | Ali Taxis"> 
     <meta property="og:description" content="Discover customer feedback and leave a Google review for Ali Taxis in Paddock Wood and surrounding areas.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://alitaxis.co.uk/reviews.html">
@@ -42,11 +41,9 @@
             border-bottom: 1px solid #d4af37;
         }
 
-        /* NAVIGATION - MATCHING LOCAL.HTML */
-
+        /* Navigation */
         .navbar {
             background: #111111;
-            border-bottom: 1px solid #d4af37;
             padding: 14px 20px;
         }
 
@@ -66,7 +63,6 @@
             font-weight: bold;
             font-size: 15px;
             transition: color 0.2s ease;
-            text-decoration: none;
         }
 
         .nav-menu a:hover {
@@ -76,7 +72,7 @@
         .menu-toggle {
             display: none;
             background: transparent;
-            border: 1px solid #d4af37;
+            border: 1px solid var(--gold);
             color: #d4af37;
             padding: 8px 12px;
             font-size: 16px;
@@ -246,10 +242,8 @@
             background: #ffd700;
         }
 
-        /* MOBILE NAVIGATION - MATCHING LOCAL.HTML */
-
+        /* Mobile navigation */
         @media (max-width: 700px) {
-
             .navbar {
                 padding: 12px 16px;
             }
@@ -276,11 +270,9 @@
                 padding: 11px 0;
                 border-top: 1px solid #30291a;
             }
-
         }
 
         @media (max-width: 650px) {
-
             header {
                 padding: 15px 15px 25px;
             }
@@ -303,11 +295,9 @@
                 bottom: 12px;
                 padding: 12px 15px;
             }
-
         }
 
         @media (prefers-reduced-motion: reduce) {
-
             html {
                 scroll-behavior: auto;
             }
@@ -317,56 +307,36 @@
             *::after {
                 transition-duration: 0.01ms !important;
             }
-
         }
-
     </style>
 </head>
 
 <body>
-
-    <!-- NAVIGATION - COPIED FROM LOCAL.HTML -->
 
     <nav class="navbar" aria-label="Main navigation">
 
         <button
             class="menu-toggle"
             id="menuToggle"
+            type="button"
             aria-expanded="false"
-            aria-controls="navMenu"
-            type="button">
+            aria-controls="navMenu">
             ☰ Menu
         </button>
 
         <ul class="nav-menu" id="navMenu">
-
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-
-            <li>
-                <a href="local.html">Local Taxi Journeys</a>
-            </li>
-
-            <li>
-                <a href="airports.html">Airport Transfers</a>
-            </li>
-
-            <li>
-                <a href="reviews.html" aria-current="page">
-                    Reviews
-                </a>
-            </li>
-
-            <li>
-                <a href="legal.html">Legal</a>
-            </li>
-
+            <li><a href="index.html">Home</a></li>
+            <li><a href="local.html">Local Taxi Journeys</a></li>
+            <li><a href="airports.html">Airport Transfers</a></li>
+            <li><a href="reviews.html" aria-current="page">Reviews</a></li>
+            <li><a href="legal.html">Legal</a></li>
         </ul>
 
     </nav>
 
     <header>
+
+
     </header>
 
     <main>
@@ -444,28 +414,19 @@
 
     </footer>
 
-    <!-- MOBILE MENU TOGGLE - MATCHING LOCAL.HTML -->
-
     <script>
-
         const menuToggle = document.getElementById("menuToggle");
         const navMenu = document.getElementById("navMenu");
 
         menuToggle.addEventListener("click", function () {
-
             const isOpen = navMenu.classList.toggle("open");
 
-            menuToggle.setAttribute("aria-expanded", isOpen);
-
-            menuToggle.textContent = isOpen
-                ? "✕ Close"
-                : "☰ Menu";
-
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.textContent = isOpen ? "✕ Close" : "☰ Menu";
         });
 
         document.getElementById("year").textContent =
             new Date().getFullYear();
-
     </script>
 
 </body>
