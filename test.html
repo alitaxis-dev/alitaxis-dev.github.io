@@ -7,7 +7,7 @@
 
     <title>Airport Transfers | Ali Taxis | Paddock Wood</title>
 
-    <meta name="description" content="Reliable airport transfers from Paddock Wood, Pembury, Five Oak Green, Horsmonden, Goudhurst and surrounding areas. Starting prices for Heathrow, Gatwick, Stansted, Luton and London City Airport.">
+    <meta name="description" content="Reliable airport transfers from Paddock Wood, Pembury, Five Oak Green, Horsmonden, Goudhurst and surrounding areas. Fixed prices for Heathrow, Gatwick, Stansted, Luton and London City Airport.">
 
     <link rel="canonical" href="https://alitaxis.co.uk/airports.html">
 
@@ -15,10 +15,10 @@
         :root {
             --black: #080808;
             --dark: #151515;
-            --gold: #d4af37;
-            --light-gold: #f4d03f;
-            --white: #ffffff;
-            --grey: #cccccc;
+            --gold: #D4AF37;
+            --light-gold: #F4D03F;
+            --white: #FFFFFF;
+            --grey: #CCCCCC;
             --border: #393326;
         }
 
@@ -198,7 +198,7 @@
         .pricing-intro {
             margin: 22px 0 25px;
             padding: 18px 16px;
-            background: #19170f;
+            background: #19170F;
             border: 2px solid var(--gold);
             border-radius: 8px;
             text-align: center;
@@ -224,9 +224,9 @@
         .table-container {
             width: 100%;
             padding: 12px;
-            border: 1px solid #806b2d;
+            border: 1px solid #806B2D;
             border-radius: 12px;
-            background: #0c0c0c;
+            background: #0C0C0C;
             box-shadow: 0 5px 22px rgba(212, 175, 55, 0.10);
         }
 
@@ -243,9 +243,9 @@
             padding: 12px 18px;
             font-size: 15px;
             font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            border-bottom: 1px solid #55451b;
+            text-transform: none;
+            letter-spacing: normal;
+            border-bottom: 1px solid #55451B;
         }
 
         .airport-prices th:last-child {
@@ -254,7 +254,7 @@
         }
 
         .airport-prices tbody tr {
-            background: #19170f;
+            background: #19170F;
             transition: background 0.25s ease, transform 0.25s ease;
         }
 
@@ -269,13 +269,14 @@
             font-size: 19px;
             font-weight: 400;
             line-height: 1.4;
-            border-top: 1px solid #55451b;
-            border-bottom: 1px solid #55451b;
+            border-top: 1px solid #55451B;
+            border-bottom: 1px solid #55451B;
         }
 
         .airport-prices td:first-child {
-            border-left: 1px solid #55451b;
+            border-left: 1px solid #55451B;
             border-radius: 8px 0 0 8px;
+            font-weight: 400;
         }
 
         .airport-prices td:last-child {
@@ -294,6 +295,10 @@
             border-radius: 0 8px 8px 0;
         }
 
+        .airport-prices td:last-child strong {
+            font-weight: 900;
+        }
+
         /* Important pricing information */
 
         .pricing-notes {
@@ -310,35 +315,32 @@
             margin: 0 0 22px;
             padding-bottom: 15px;
             color: var(--light-gold);
-            font-size: 23px;
+            font-size: 25px;
             font-weight: 900;
             text-align: center;
             border-bottom: 1px solid var(--border);
         }
 
         .pricing-notes p {
-            margin: 0;
-            padding: 14px 12px;
-            border-bottom: 1px solid var(--border);
-            color: var(--grey);
-            font-size: 15px;
+            margin: 12px 0;
+            padding: 17px 16px;
+            background: #211C0E;
+            border: 1px solid var(--gold);
+            border-left: 5px solid var(--gold);
+            border-radius: 7px;
+            color: var(--light-gold);
+            font-size: 17px;
+            font-weight: 800;
             line-height: 1.6;
         }
 
         .pricing-notes p:first-of-type {
-            margin-bottom: 8px;
-            padding: 15px;
-            background: #19170f;
-            border: 1px solid var(--gold);
-            border-radius: 6px;
+            background: #19170F;
             color: var(--light-gold);
-            font-size: 16px;
-            font-weight: 800;
         }
 
         .pricing-notes p:last-child {
-            border-bottom: none;
-            padding-bottom: 5px;
+            margin-bottom: 0;
         }
 
         .pricing-cta {
@@ -427,7 +429,7 @@
                 width: 100%;
                 text-align: center;
                 padding: 11px 0;
-                border-top: 1px solid #30291a;
+                border-top: 1px solid #30291A;
             }
 
             header {
@@ -469,8 +471,7 @@
 
             .airport-prices thead th {
                 padding: 11px 9px;
-                font-size: 12px;
-                letter-spacing: 1px;
+                font-size: 14px;
             }
 
             .airport-prices th:last-child {
@@ -497,7 +498,8 @@
             }
 
             .pricing-notes p {
-                padding: 13px 8px;
+                padding: 15px 12px;
+                font-size: 16px;
             }
 
             .button {
@@ -508,7 +510,7 @@
         @media (max-width: 360px) {
 
             .airport-prices thead th {
-                font-size: 11px;
+                font-size: 13px;
                 padding: 10px 6px;
             }
 
@@ -593,8 +595,6 @@
 
     <main>
 
-        <!-- Airport introduction -->
-
         <section class="page-heading">
 
             <h1>Airport Transfers</h1>
@@ -628,15 +628,11 @@
             <div class="pricing-intro">
 
                 <p class="location-notice">
-                    <strong>
-                        Please contact us for prices from other locations.
-                    </strong>
+                    Please contact us for prices from other locations.
                 </p>
 
                 <p class="standard-car-notice">
-                    <strong>
-                        The following prices are for a Standard Car.
-                    </strong>
+                    The following prices are for a Standard Car.
                 </p>
 
             </div>
@@ -650,7 +646,7 @@
                     <thead>
                         <tr>
                             <th scope="col">Airport</th>
-                            <th scope="col">Fare (from)</th>
+                            <th scope="col">Fare (From)</th>
                         </tr>
                     </thead>
 
@@ -699,17 +695,21 @@
                 </p>
 
                 <p>
-                    Night premiums may apply.
+                    <strong>Night premiums may apply.</strong>
                 </p>
 
                 <p>
-                    Bigger vehicles are available on request.
-                    Additional charges may apply.
+                    <strong>
+                        Bigger vehicles are available on request.
+                        Additional charges may apply.
+                    </strong>
                 </p>
 
                 <p>
-                    Your full fare will be confirmed at the time
-                    of booking.
+                    <strong>
+                        Your full fare will be confirmed at the time
+                        of booking.
+                    </strong>
                 </p>
 
             </div>
