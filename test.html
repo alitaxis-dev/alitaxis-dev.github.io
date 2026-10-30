@@ -86,7 +86,7 @@
             border-bottom: 1px solid #d4af37;
         }
 
-        /* LOGO */
+        /* LOGO: ORIGINAL MAXIMUM WIDTH PRESERVED */
         .logo {
             display: block;
             max-width: 900px;
@@ -95,13 +95,11 @@
             margin: 0 auto 15px;
         }
 
-        /* NAVIGATION - MATCHING AIRPORT TRANSFERS PAGE */
+        /* NAVIGATION - MATCHING LOCAL.HTML */
         .navbar {
             background: #111111;
             border-bottom: 1px solid #d4af37;
             padding: 14px 20px;
-            margin: 0 auto 22px;
-            position: relative;
         }
 
         .nav-menu {
@@ -119,16 +117,11 @@
             color: #d4af37;
             font-weight: bold;
             font-size: 15px;
-            text-decoration: none;
             transition: color 0.2s ease;
+            text-decoration: none;
         }
 
-        .nav-menu a:hover,
-        .nav-menu a:focus {
-            color: #ffffff;
-        }
-
-        .nav-menu a[aria-current="page"] {
+        .nav-menu a:hover {
             color: #ffffff;
         }
 
@@ -140,7 +133,6 @@
             padding: 8px 12px;
             font-size: 16px;
             cursor: pointer;
-            border-radius: 4px;
         }
 
         .tagline {
@@ -282,37 +274,11 @@
             background: #ffd700;
         }
 
-        /* MOBILE RESPONSIVE DESIGN */
-        @media (max-width: 650px) {
-            header {
-                padding: 15px 15px 25px;
-            }
-
-            .tagline {
-                font-size: 1.05rem;
-                margin: 18px auto;
-            }
-
-            .container {
-                padding: 35px 18px;
-            }
-
-            .service-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .floating-whatsapp {
-                right: 12px;
-                bottom: 12px;
-                padding: 12px 15px;
-            }
-        }
-
-        /* MOBILE NAVIGATION - MATCHING AIRPORT TRANSFERS PAGE */
+        /* MOBILE NAVIGATION - MATCHING LOCAL.HTML */
         @media (max-width: 700px) {
+
             .navbar {
                 padding: 12px 16px;
-                margin-bottom: 18px;
             }
 
             .menu-toggle {
@@ -339,7 +305,37 @@
             }
         }
 
+        /* MOBILE RESPONSIVE DESIGN */
+        @media (max-width: 650px) {
+
+            header {
+                padding: 15px 15px 25px;
+            }
+
+            /* Logo keeps its 900px maximum and scales to screen width */
+
+            .tagline {
+                font-size: 1.05rem;
+                margin: 18px auto;
+            }
+
+            .container {
+                padding: 35px 18px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-whatsapp {
+                right: 12px;
+                bottom: 12px;
+                padding: 12px 15px;
+            }
+        }
+
         @media (prefers-reduced-motion: reduce) {
+
             html {
                 scroll-behavior: auto;
             }
@@ -363,18 +359,34 @@
         <button
             class="menu-toggle"
             id="menuToggle"
-            type="button"
             aria-expanded="false"
-            aria-controls="navMenu">
+            aria-controls="navMenu"
+            type="button">
             ☰ Menu
         </button>
 
         <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="local.html">Local Taxi Journeys</a></li>
-            <li><a href="airports.html">Airport Transfers</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="legal.html">Legal</a></li>
+
+            <li>
+                <a href="index.html" aria-current="page">Home</a>
+            </li>
+
+            <li>
+                <a href="local.html">Local Taxi Journeys</a>
+            </li>
+
+            <li>
+                <a href="airports.html">Airport Transfers</a>
+            </li>
+
+            <li>
+                <a href="reviews.html">Reviews</a>
+            </li>
+
+            <li>
+                <a href="legal.html">Legal</a>
+            </li>
+
         </ul>
 
     </nav>
@@ -423,38 +435,52 @@
         <div class="service-grid">
 
             <article class="service-card">
+
                 <h3>Local Taxi Journeys</h3>
+
                 <p>
                     Travel to local destinations, appointments, shops
                     and other destinations around Kent.
                 </p>
-                <a href="local.html" class="btn">
+
+                <a
+                    href="local.html"
+                    class="btn">
                     Local Trip
                 </a>
+
             </article>
 
             <article class="service-card">
+
                 <h3>Airport Transfers</h3>
+
                 <p>
                     Pre-book transfers to Heathrow, Gatwick, Stansted,
                     Luton and London City Airport.
                 </p>
+
                 <a href="airports.html" class="btn">
                     View Airport Prices
                 </a>
+
             </article>
 
             <article class="service-card">
+
                 <h3>Long-Distance Travel</h3>
+
                 <p>
                     Ask us for a quote for longer journeys and trips
                     to destinations across the UK.
                 </p>
+
                 <a
                     href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20I%20would%20like%20a%20long-distance%20taxi%20quote."
                     class="btn">
                     Get a Quote
                 </a>
+
             </article>
 
         </div>
@@ -525,15 +551,22 @@
 
 <!-- MOBILE MENU TOGGLE -->
 <script>
+
     const menuToggle = document.getElementById("menuToggle");
     const navMenu = document.getElementById("navMenu");
 
     menuToggle.addEventListener("click", function () {
+
         const isOpen = navMenu.classList.toggle("open");
 
-        menuToggle.setAttribute("aria-expanded", String(isOpen));
-        menuToggle.textContent = isOpen ? "✕ Close" : "☰ Menu";
+        menuToggle.setAttribute("aria-expanded", isOpen);
+
+        menuToggle.textContent = isOpen
+            ? "✕ Close"
+            : "☰ Menu";
+
     });
+
 </script>
 
 </body>
