@@ -79,12 +79,30 @@
             line-height: 1.7;
         }
 
-        /* NAVIGATION */
+        /* HEADER */
+        header {
+            background: #080808;
+            text-align: center;
+            padding: 20px 20px 30px;
+            border-bottom: 1px solid #d4af37;
+        }
 
+        /* LOGO */
+        .logo {
+            display: block;
+            max-width: 900px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 15px;
+        }
+
+        /* NAVIGATION - MATCHING LOCAL.HTML */
         .navbar {
             background: #111111;
             border-bottom: 1px solid #d4af37;
             padding: 14px 20px;
+            margin: 0 -20px 22px;
+            position: relative;
         }
 
         .nav-menu {
@@ -100,9 +118,9 @@
 
         .nav-menu a {
             color: #d4af37;
-            text-decoration: none;
             font-weight: bold;
             font-size: 15px;
+            text-decoration: none;
             transition: color 0.2s ease;
         }
 
@@ -110,10 +128,7 @@
             color: #ffffff;
         }
 
-        .nav-menu a[aria-current="page"] {
-            color: #ffffff;
-        }
-
+        /* MOBILE MENU BUTTON */
         .menu-toggle {
             display: none;
             background: transparent;
@@ -122,51 +137,35 @@
             padding: 8px 12px;
             font-size: 16px;
             cursor: pointer;
-            border-radius: 4px;
-        }
-
-        /* HEADER */
-
-        header {
-            background: #080808;
-            text-align: center;
-            padding: 30px 20px 35px;
-            border-bottom: 1px solid #d4af37;
         }
 
         .tagline {
-            color: #d4af37;
-            font-size: 18px;
-            margin: 0 auto 22px;
+            margin: 20px auto;
+            max-width: 800px;
+            font-size: 1.2rem;
         }
 
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .button {
+        /* GOLD BUTTONS */
+        .btn {
             display: inline-block;
-            background: #d4af37;
-            color: #000000;
-            padding: 12px 22px;
-            border-radius: 5px;
-            font-weight: bold;
-            text-align: center;
+            background: linear-gradient(135deg, #d4af37, #f4d03f);
+            color: #000;
             text-decoration: none;
-            transition: background 0.2s ease;
+            padding: 13px 23px;
+            margin: 8px;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 1px solid #d4af37;
+            transition: 0.3s;
         }
 
-        .button:hover {
-            background: #f4d03f;
-            color: #000000;
+        .btn:hover,
+        .btn:focus {
+            background: linear-gradient(135deg, #f4d03f, #ffd700);
+            transform: translateY(-2px);
         }
 
         /* MAIN CONTENT */
-
         .container {
             max-width: 1100px;
             margin: auto;
@@ -196,7 +195,6 @@
         }
 
         /* SERVICE CARDS */
-
         .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -222,7 +220,6 @@
         }
 
         /* CONTACT */
-
         .contact {
             text-align: center;
         }
@@ -241,7 +238,6 @@
         }
 
         /* FOOTER */
-
         footer {
             background: #111;
             text-align: center;
@@ -264,7 +260,6 @@
         }
 
         /* FLOATING WHATSAPP */
-
         .floating-whatsapp {
             position: fixed;
             right: 20px;
@@ -283,12 +278,12 @@
             background: #ffd700;
         }
 
-        /* MOBILE NAVIGATION AND HEADER */
-
+        /* MOBILE NAVIGATION - MATCHING LOCAL.HTML */
         @media (max-width: 700px) {
 
             .navbar {
                 padding: 12px 16px;
+                margin-bottom: 18px;
             }
 
             .menu-toggle {
@@ -315,17 +310,13 @@
             }
 
             header {
-                padding: 24px 15px 30px;
+                padding: 15px 15px 25px;
             }
 
             .tagline {
-                font-size: 16px;
+                font-size: 1.05rem;
+                margin: 18px auto;
             }
-        }
-
-        /* MOBILE RESPONSIVE DESIGN */
-
-        @media (max-width: 650px) {
 
             .container {
                 padding: 35px 18px;
@@ -343,7 +334,6 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-
             html {
                 scroll-behavior: auto;
             }
@@ -354,14 +344,14 @@
                 transition-duration: 0.01ms !important;
             }
         }
-
     </style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
+<header>
 
+    <!-- NAVIGATION - MATCHING LOCAL.HTML -->
     <nav class="navbar" aria-label="Main navigation">
 
         <button
@@ -399,184 +389,164 @@
 
     </nav>
 
-    <!-- HEADER -->
-
-    <header>
-
-        <p class="tagline">
-            Airport Transfers • Paddock Wood and Surrounding Areas
-        </p>
-
-        <div class="contact-buttons">
-
-            <a
-                class="button"
-                href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20I%20would%20like%20to%20enquire%20about%20an%20airport%20transfer.">
-                WhatsApp to Book
-            </a>
-
-        </div>
-
-    </header>
-
-    <main>
-
-        <!-- HOMEPAGE INTRODUCTION -->
-
-        <section class="container">
-
-            <h1>Ali Taxis – Top Rated Taxi Service</h1>
-
-            <p class="about">
-                Ali Taxis provides reliable local taxi services and airport
-                transfers from Paddock Wood, Pembury, Tunbridge Wells, Five Oak Green, East Peckham, Horsmonden,
-                Goudhurst and surrounding areas. We offer friendly service for
-                local journeys, airport transfers, long-distance travel and
-                train station transfers. Contact us to discuss your journey
-                and confirm your fare before booking.
-            </p>
-
-            <div class="service-grid">
-
-                <article class="service-card">
-
-                    <h3>Local Taxi Journeys</h3>
-
-                    <p>
-                        Travel to local destinations, appointments, shops
-                        and other destinations around Kent.
-                    </p>
-
-                    <a
-                        href="local.html"
-                        class="btn">
-                        Local Trip
-                    </a>
-
-                </article>
-
-                <article class="service-card">
-
-                    <h3>Airport Transfers</h3>
-
-                    <p>
-                        Pre-book transfers to Heathrow, Gatwick, Stansted,
-                        Luton and London City Airport.
-                    </p>
-
-                    <a href="airports.html" class="btn">
-                        View Airport Prices
-                    </a>
-
-                </article>
-
-                <article class="service-card">
-
-                    <h3>Long-Distance Travel</h3>
-
-                    <p>
-                        Ask us for a quote for longer journeys and trips
-                        to destinations across the UK.
-                    </p>
-
-                    <a
-                        href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20I%20would%20like%20a%20long-distance%20taxi%20quote."
-                        class="btn">
-                        Get a Quote
-                    </a>
-
-                </article>
-
-            </div>
-
-        </section>
-
-        <!-- CONTACT -->
-
-        <section class="container contact">
-
-            <h2>Contact Ali Taxis</h2>
-
-            <p>
-                WhatsApp:
-                <a href="https://wa.me/447396736270">
-                    07396 736270
-                </a>
-            </p>
-
-            <p>
-                Telephone:
-                <a href="tel:+447396736270">
-                    07396 736270
-                </a>
-            </p>
-
-            <p>
-                Email:
-                <a href="mailto:AliTaxisTW@gmail.com">
-                    AliTaxisTW@gmail.com
-                </a>
-            </p>
-
-            <p style="margin-top:20px;">
-                For bookings, please provide date, time, pickup location,
-                destination, number of passengers.
-            </p>
-
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>© 2026 Ali Taxis | Local Taxis & Airport Transfers</p>
-
-        <p>
-            Serving Paddock Wood, Pembury, Five Oak Green,
-            Horsmonden, Goudhurst and surrounding areas.
-        </p>
-
-        <p style="margin-top:10px;">
-            <a href="airports.html">Airport Transfers</a>
-            &nbsp;|&nbsp;
-            <a href="reviews.html">Customer Reviews</a>
-            &nbsp;|&nbsp;
-            <a href="legal.html">Legal Information</a>
-        </p>
-
-    </footer>
-
-    <!-- FLOATING WHATSAPP BUTTON -->
-
-    <a
-        href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20I%20would%20like%20a%20taxi%20quote."
-        class="floating-whatsapp"
-        aria-label="Contact Ali Taxis on WhatsApp">
-        💬 WhatsApp
+    <!-- LOGO -->
+    <a href="index.html" aria-label="Ali Taxis homepage">
+        <img src="logo.png" alt="Ali Taxis Logo" class="logo">
     </a>
 
-    <!-- MOBILE MENU TOGGLE -->
+    <!-- TAGLINE -->
+    <p class="tagline">
+        Reliable Local Taxis and Airport Transfers around Paddock Wood and Surrounding Areas
+    </p>
 
-    <script>
+    <!-- CONTACT BUTTONS -->
+    <a
+        href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20I%20would%20like%20a%20taxi%20quote."
+        class="btn">
+        💬 WhatsApp Us
+    </a>
 
-        const menuToggle = document.getElementById("menuToggle");
-        const navMenu = document.getElementById("navMenu");
+    <a
+        href="mailto:AliTaxisTW@gmail.com?subject=Taxi%20Enquiry"
+        class="btn">
+        ✉️ Email Us
+    </a>
 
-        menuToggle.addEventListener("click", function () {
+</header>
 
-            const isOpen = navMenu.classList.toggle("open");
+<main>
 
-            menuToggle.setAttribute("aria-expanded", String(isOpen));
+    <!-- HOMEPAGE INTRODUCTION -->
+    <section class="container">
 
-            menuToggle.textContent = isOpen
-                ? "✕ Close"
-                : "☰ Menu";
+        <h1>Ali Taxis – Top Rated Taxi Service</h1>
 
-        });
+        <p class="about">
+            Ali Taxis provides reliable local taxi services and airport
+            transfers from Paddock Wood, Pembury, Tunbridge Wells, Five Oak Green, East Peckham, Horsmonden,
+            Goudhurst and surrounding areas. We offer friendly service for
+            local journeys, airport transfers, long-distance travel and
+            train station transfers. Contact us to discuss your journey
+            and confirm your fare before booking.
+        </p>
 
-    </script>
+        <div class="service-grid">
+
+            <article class="service-card">
+                <h3>Local Taxi Journeys</h3>
+                <p>
+                    Travel to local destinations, appointments, shops
+                    and other destinations around Kent.
+                </p>
+                <a href="local.html" class="btn">
+                    Local Trip
+                </a>
+            </article>
+
+            <article class="service-card">
+                <h3>Airport Transfers</h3>
+                <p>
+                    Pre-book transfers to Heathrow, Gatwick, Stansted,
+                    Luton and London City Airport.
+                </p>
+                <a href="airports.html" class="btn">
+                    View Airport Prices
+                </a>
+            </article>
+
+            <article class="service-card">
+                <h3>Long-Distance Travel</h3>
+                <p>
+                    Ask us for a quote for longer journeys and trips
+                    to destinations across the UK.
+                </p>
+                <a
+                    href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20I%20would%20like%20a%20long-distance%20taxi%20quote."
+                    class="btn">
+                    Get a Quote
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="container contact">
+
+        <h2>Contact Ali Taxis</h2>
+
+        <p>
+            WhatsApp:
+            <a href="https://wa.me/447396736270">
+                07396 736270
+            </a>
+        </p>
+
+        <p>
+            Telephone:
+            <a href="tel:+447396736270">
+                07396 736270
+            </a>
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:AliTaxisTW@gmail.com">
+                AliTaxisTW@gmail.com
+            </a>
+        </p>
+
+        <p style="margin-top:20px;">
+            For bookings, please provide date, time, pickup location,
+            destination, number of passengers.
+        </p>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+
+    <p>© 2026 Ali Taxis | Local Taxis & Airport Transfers</p>
+
+    <p>
+        Serving Paddock Wood, Pembury, Five Oak Green,
+        Horsmonden, Goudhurst and surrounding areas.
+    </p>
+
+    <p style="margin-top:10px;">
+        <a href="airports.html">Airport Transfers</a>
+        &nbsp;|&nbsp;
+        <a href="reviews.html">Customer Reviews</a>
+        &nbsp;|&nbsp;
+        <a href="legal.html">Legal Information</a>
+    </p>
+
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a
+    href="https://wa.me/447396736270?text=Hello%20Ali%20Taxis%2C%20I%20would%20like%20a%20taxi%20quote."
+    class="floating-whatsapp"
+    aria-label="Contact Ali Taxis on WhatsApp">
+    💬 WhatsApp
+</a>
+
+<!-- MOBILE MENU TOGGLE -->
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", function () {
+        const isOpen = navMenu.classList.toggle("open");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.textContent = isOpen
+            ? "✕ Close"
+            : "☰ Menu";
+    });
+</script>
 
 </body>
 </html>
