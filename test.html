@@ -349,7 +349,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--light-gold);
+            color: var(--gold);
             font-size: 25px;
             line-height: 1;
         }
@@ -358,8 +358,10 @@
             flex: 1;
         }
 
-        .pricing-notes p:last-child {
-            margin-bottom: 0;
+        /* Vehicle notice: normal weight */
+
+        .pricing-notes .vehicle-notice {
+            font-weight: 400;
         }
 
         .pricing-cta {
@@ -704,14 +706,14 @@
 
             <div class="pricing-notes">
 
-                <h3>⚠ Important Pricing Information</h3>
+                <h3>Important Pricing Information</h3>
 
                 <p>
                     <span class="notice-icon" aria-hidden="true">⚠</span>
                     <span class="notice-text">
                         <strong>
-                            Airport charges are NOT included in the
-                            fares shown above.
+                            Airport charges are NOT included
+                            in the fares shown above.
                         </strong>
                     </span>
                 </p>
@@ -723,13 +725,11 @@
                     </span>
                 </p>
 
-                <p>
+                <p class="vehicle-notice">
                     <span class="notice-icon" aria-hidden="true">🚘</span>
                     <span class="notice-text">
-                        <strong>
-                            Bigger vehicles are available on request.
-                            Additional charges may apply.
-                        </strong>
+                        Bigger vehicles are available on request.
+                        Additional charges may apply.
                     </span>
                 </p>
 
