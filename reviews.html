@@ -1,17 +1,17 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="Read customer reviews and share your experience with Ali Taxis. Local taxi journeys and airport transfers from Paddock Wood, Pembury, Five Oak Green, Horsmonden and Goudhurst.">
 
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://alitaxis.co.uk/reviews.html">
 
-    <meta property="og:title" content="Customer Reviews | Ali Taxis"> 
+    <meta property="og:title" content="Customer Reviews | Ali Taxis">
     <meta property="og:description" content="Discover customer feedback and leave a Google review for Ali Taxis in Paddock Wood and surrounding areas.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://alitaxis.co.uk/reviews.html">
@@ -36,57 +36,57 @@
             line-height: 1.7;
         }
 
-        header {
-            background: #080808;
-            text-align: center;
-            padding: 20px 20px 30px;
-            border-bottom: 1px solid #d4af37;
-        }
+        /* Navigation - copied from local.html */
 
         .navbar {
-            max-width: 1100px;
-            margin: 0 auto 22px;
-            position: relative;
+            background: #111111;
+            border-bottom: 1px solid #d4af37;
+            padding: 14px 20px;
         }
 
         .nav-menu {
-            list-style: none;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 12px 32px;
+            gap: 28px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
         .nav-menu a {
-            display: inline-block;
-            padding: 8px 3px;
             color: #d4af37;
-            text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s ease;
+            font-size: 15px;
+            text-decoration: none;
+            transition: color 0.2s ease;
         }
 
-        .nav-menu a:hover,
-        .nav-menu a:focus {
-            color: #fff;
+        .nav-menu a:hover {
+            color: #ffffff;
         }
 
         .nav-menu a[aria-current="page"] {
             color: #f4d03f;
-            border-bottom: 2px solid #d4af37;
         }
 
         .menu-toggle {
             display: none;
-            background: linear-gradient(135deg, #d4af37, #f4d03f);
-            color: #000;
+            background: transparent;
             border: 1px solid #d4af37;
-            border-radius: 6px;
-            padding: 10px 18px;
-            font-size: 1rem;
-            font-weight: bold;
+            color: #d4af37;
+            padding: 8px 12px;
+            font-size: 16px;
             cursor: pointer;
+        }
+
+        /* Header */
+
+        header {
+            background: #080808;
+            text-align: center;
+            padding: 20px 20px 30px;
         }
 
         .tagline {
@@ -113,6 +113,8 @@
             background: linear-gradient(135deg, #f4d03f, #ffd700);
             transform: translateY(-2px);
         }
+
+        /* Main content */
 
         .container {
             max-width: 1100px;
@@ -141,6 +143,8 @@
             max-width: 850px;
             margin: 0 auto 30px;
         }
+
+        /* Review card */
 
         .review-card {
             max-width: 800px;
@@ -185,6 +189,8 @@
             margin: 5px;
         }
 
+        /* Information grid */
+
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -213,6 +219,8 @@
             text-align: center;
         }
 
+        /* Footer */
+
         footer {
             background: #111;
             text-align: center;
@@ -234,6 +242,8 @@
             color: #fff;
         }
 
+        /* Floating WhatsApp */
+
         .floating-whatsapp {
             position: fixed;
             right: 20px;
@@ -252,28 +262,24 @@
             background: #ffd700;
         }
 
-        @media (max-width: 650px) {
-            header {
-                padding: 15px 15px 25px;
-            }
+        /* Mobile layout - copied from local.html */
+
+        @media (max-width: 700px) {
 
             .navbar {
-                margin-bottom: 18px;
+                padding: 12px 16px;
             }
 
             .menu-toggle {
-                display: inline-block;
+                display: block;
                 margin: 0 auto;
             }
 
             .nav-menu {
                 display: none;
                 flex-direction: column;
-                align-items: stretch;
                 gap: 0;
-                margin-top: 12px;
-                padding: 8px 0;
-                border-top: 1px solid #55451b;
+                padding-top: 12px;
             }
 
             .nav-menu.open {
@@ -282,16 +288,13 @@
 
             .nav-menu li {
                 width: 100%;
+                text-align: center;
+                padding: 11px 0;
+                border-top: 1px solid #30291a;
             }
 
-            .nav-menu a {
-                display: block;
-                width: 100%;
-                padding: 11px;
-            }
-
-            .nav-menu a[aria-current="page"] {
-                border-bottom: none;
+            header {
+                padding: 15px 15px 25px;
             }
 
             .tagline {
@@ -314,6 +317,8 @@
             }
         }
 
+        /* Reduced motion */
+
         @media (prefers-reduced-motion: reduce) {
             html {
                 scroll-behavior: auto;
@@ -330,30 +335,52 @@
 
 <body>
 
+<!-- Navigation -->
+
+<nav class="navbar" aria-label="Main navigation">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-expanded="false"
+        aria-controls="navMenu"
+        type="button">
+        ☰ Menu
+    </button>
+
+    <ul class="nav-menu" id="navMenu">
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="local.html">Local Taxi Journeys</a>
+        </li>
+
+        <li>
+            <a href="airports.html">Airport Transfers</a>
+        </li>
+
+        <li>
+            <a href="reviews.html" aria-current="page">Reviews</a>
+        </li>
+
+        <li>
+            <a href="legal.html">Legal</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<!-- Header -->
+
 <header>
 
-    <nav class="navbar" aria-label="Main navigation">
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="navMenu">
-            ☰ Menu
-        </button>
-
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="local.html">Local Taxi Journeys</a></li>
-            <li><a href="airports.html">Airport Transfers</a></li>
-            <li><a href="reviews.html" aria-current="page">Reviews</a></li>
-            <li><a href="legal.html">Legal</a></li>
-        </ul>
-
-    </nav>
-
 </header>
+
+<!-- Main content -->
 
 <main>
 
@@ -424,25 +451,38 @@
 
 </main>
 
+<!-- Footer -->
+
 <footer>
 
-    <p>© <span id="year"></span> Ali Taxis | Local Taxis &amp; Airport Transfers</p>
+    <p>
+        © <span id="year"></span> Ali Taxis | Local Taxis &amp; Airport Transfers
+    </p>
 
 </footer>
 
+<!-- JavaScript -->
+
 <script>
+
     const menuToggle = document.getElementById("menuToggle");
     const navMenu = document.getElementById("navMenu");
 
     menuToggle.addEventListener("click", function () {
+
         const isOpen = navMenu.classList.toggle("open");
 
-        menuToggle.setAttribute("aria-expanded", String(isOpen));
-        menuToggle.textContent = isOpen ? "✕ Close Menu" : "☰ Menu";
+        menuToggle.setAttribute("aria-expanded", isOpen);
+
+        menuToggle.textContent = isOpen
+            ? "✕ Close"
+            : "☰ Menu";
+
     });
 
     document.getElementById("year").textContent =
         new Date().getFullYear();
+
 </script>
 
 </body>
