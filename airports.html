@@ -7,7 +7,7 @@
 
     <title>Airport Transfers | Ali Taxis | Paddock Wood</title>
 
-    <meta name="description" content="Reliable airport transfers from Paddock Wood, Pembury, Five Oak Green, Horsmonden, Goudhurst and surrounding areas. Starting prices for Heathrow, Gatwick, Stansted, Luton and London City Airport.">
+    <meta name="description" content="Reliable airport transfers from Paddock Wood, Pembury, Five Oak Green, Horsmonden, Goudhurst and surrounding areas. Fixed prices for Heathrow, Gatwick, Stansted, Luton and London City Airport.">
 
     <link rel="canonical" href="https://alitaxis.co.uk/airports.html">
 
@@ -15,10 +15,10 @@
         :root {
             --black: #080808;
             --dark: #151515;
-            --gold: #d4af37;
-            --light-gold: #f4d03f;
-            --white: #ffffff;
-            --grey: #cccccc;
+            --gold: #D4AF37;
+            --light-gold: #F4D03F;
+            --white: #FFFFFF;
+            --grey: #CCCCCC;
             --border: #393326;
         }
 
@@ -139,7 +139,7 @@
 
         .page-heading {
             text-align: center;
-            margin: 10px 0 35px;
+            margin: 35px 0;
         }
 
         h1, h2, h3 {
@@ -198,7 +198,7 @@
         .pricing-intro {
             margin: 22px 0 25px;
             padding: 18px 16px;
-            background: #19170f;
+            background: #19170F;
             border: 2px solid var(--gold);
             border-radius: 8px;
             text-align: center;
@@ -219,14 +219,14 @@
             color: var(--white);
         }
 
-        /* Redesigned airport pricing table */
+        /* Airport pricing table */
 
         .table-container {
             width: 100%;
             padding: 12px;
-            border: 1px solid #806b2d;
+            border: 1px solid #806B2D;
             border-radius: 12px;
-            background: #0c0c0c;
+            background: #0C0C0C;
             box-shadow: 0 5px 22px rgba(212, 175, 55, 0.10);
         }
 
@@ -243,9 +243,9 @@
             padding: 12px 18px;
             font-size: 15px;
             font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            border-bottom: 1px solid #55451b;
+            text-transform: none;
+            letter-spacing: normal;
+            border-bottom: 1px solid #55451B;
         }
 
         .airport-prices th:last-child {
@@ -254,7 +254,7 @@
         }
 
         .airport-prices tbody tr {
-            background: #19170f;
+            background: #19170F;
             transition: background 0.25s ease, transform 0.25s ease;
         }
 
@@ -267,15 +267,16 @@
             padding: 19px 18px;
             color: var(--white);
             font-size: 19px;
-            font-weight: 800;
+            font-weight: 400;
             line-height: 1.4;
-            border-top: 1px solid #55451b;
-            border-bottom: 1px solid #55451b;
+            border-top: 1px solid #55451B;
+            border-bottom: 1px solid #55451B;
         }
 
         .airport-prices td:first-child {
-            border-left: 1px solid #55451b;
+            border-left: 1px solid #55451B;
             border-radius: 8px 0 0 8px;
+            font-weight: 400;
         }
 
         .airport-prices td:last-child {
@@ -294,51 +295,77 @@
             border-radius: 0 8px 8px 0;
         }
 
+        .airport-prices td:last-child strong {
+            font-weight: 900;
+        }
+
         /* Important pricing information */
 
         .pricing-notes {
-            margin: 28px 0 22px;
-            padding: 24px 22px;
-            background: #111111;
-            border: 1px solid var(--gold);
-            border-radius: 10px;
-            color: var(--white);
+            margin: 30px 0 22px;
+            padding: 25px 22px;
+            background: #090909;
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            box-shadow: 0 0 18px rgba(212, 175, 55, 0.16);
             text-align: left;
         }
 
         .pricing-notes h3 {
             margin: 0 0 22px;
-            padding-bottom: 15px;
+            padding-bottom: 16px;
             color: var(--light-gold);
-            font-size: 23px;
+            font-size: 26px;
             font-weight: 900;
             text-align: center;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--gold);
         }
 
         .pricing-notes p {
-            margin: 0;
-            padding: 14px 12px;
-            border-bottom: 1px solid var(--border);
-            color: var(--grey);
-            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 14px 0;
+            padding: 19px 18px;
+            background: #211C0E;
+            border: 1px solid var(--gold);
+            border-left: 6px solid var(--gold);
+            border-radius: 8px;
+            color: var(--light-gold);
+            font-size: 18px;
+            font-weight: 400;
             line-height: 1.6;
         }
 
-        .pricing-notes p:first-of-type {
-            margin-bottom: 8px;
-            padding: 15px;
-            background: #19170f;
-            border: 1px solid var(--gold);
-            border-radius: 6px;
-            color: var(--light-gold);
-            font-size: 16px;
-            font-weight: 800;
+        /* All pricing notices normal weight */
+
+        .pricing-notes p:first-of-type,
+        .pricing-notes p:last-child {
+            background: #30250C;
         }
 
-        .pricing-notes p:last-child {
-            border-bottom: none;
-            padding-bottom: 5px;
+        .pricing-notes p strong {
+            font-weight: 400;
+        }
+
+        .notice-icon {
+            flex: 0 0 34px;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 25px;
+            line-height: 1;
+        }
+
+        .notice-text {
+            flex: 1;
+        }
+
+        .pricing-notes .vehicle-notice {
+            font-weight: 400;
         }
 
         .pricing-cta {
@@ -427,7 +454,7 @@
                 width: 100%;
                 text-align: center;
                 padding: 11px 0;
-                border-top: 1px solid #30291a;
+                border-top: 1px solid #30291A;
             }
 
             header {
@@ -469,8 +496,7 @@
 
             .airport-prices thead th {
                 padding: 11px 9px;
-                font-size: 12px;
-                letter-spacing: 1px;
+                font-size: 14px;
             }
 
             .airport-prices th:last-child {
@@ -489,15 +515,24 @@
             }
 
             .pricing-notes {
-                padding: 20px 14px;
+                padding: 20px 13px;
             }
 
             .pricing-notes h3 {
-                font-size: 21px;
+                font-size: 22px;
             }
 
             .pricing-notes p {
-                padding: 13px 8px;
+                padding: 16px 12px;
+                font-size: 16px;
+                gap: 10px;
+            }
+
+            .notice-icon {
+                flex-basis: 28px;
+                width: 28px;
+                height: 28px;
+                font-size: 22px;
             }
 
             .button {
@@ -508,7 +543,7 @@
         @media (max-width: 360px) {
 
             .airport-prices thead th {
-                font-size: 11px;
+                font-size: 13px;
                 padding: 10px 6px;
             }
 
@@ -520,6 +555,10 @@
             .airport-prices td:last-child {
                 width: 90px;
                 font-size: 16px;
+            }
+
+            .pricing-notes p {
+                font-size: 15px;
             }
         }
 
@@ -593,22 +632,6 @@
 
     <main>
 
-        <!-- Airport introduction -->
-
-        <section class="page-heading">
-
-            <h1>Airport Transfers</h1>
-
-            <p class="intro">
-                Ali Taxis provides reliable airport transfers from
-                Paddock Wood, Pembury, Five Oak Green, Horsmonden,
-                Goudhurst and surrounding areas. Professional, friendly
-                service with fixed prices and comfortable journeys to
-                Heathrow, Gatwick, Stansted, Luton and London City Airport.
-            </p>
-
-        </section>
-
         <!-- Airport prices -->
 
         <section
@@ -628,59 +651,53 @@
             <div class="pricing-intro">
 
                 <p class="location-notice">
-                    <strong>
-                        Please contact us for prices from other locations.
-                    </strong>
+                    Please contact us for prices from other locations.
                 </p>
 
                 <p class="standard-car-notice">
-                    <strong>
-                        The following prices are for a Standard Car.
-                    </strong>
+                    The following prices are for a Standard Car.
                 </p>
 
             </div>
 
-            <!-- Redesigned pricing table -->
+            <!-- Airport pricing table -->
 
             <div class="table-container">
 
                 <table class="airport-prices">
 
                     <thead>
-
                         <tr>
                             <th scope="col">Airport</th>
-                            <th scope="col">Fare (from)</th>
+                            <th scope="col">Fare (From)</th>
                         </tr>
-
                     </thead>
 
                     <tbody>
 
                         <tr>
                             <td>Heathrow Airport</td>
-                            <td>£125</td>
+                            <td><strong>£125</strong></td>
                         </tr>
 
                         <tr>
                             <td>Gatwick Airport</td>
-                            <td>£85</td>
+                            <td><strong>£85</strong></td>
                         </tr>
 
                         <tr>
                             <td>London City Airport</td>
-                            <td>£115</td>
+                            <td><strong>£115</strong></td>
                         </tr>
 
                         <tr>
                             <td>Stansted Airport</td>
-                            <td>£140</td>
+                            <td><strong>£140</strong></td>
                         </tr>
 
                         <tr>
                             <td>Luton Airport</td>
-                            <td>£180</td>
+                            <td><strong>£180</strong></td>
                         </tr>
 
                     </tbody>
@@ -696,22 +713,38 @@
                 <h3>Important Pricing Information</h3>
 
                 <p>
-                    Airport charges are <strong>NOT included</strong>
-                    in the fares shown above.
+                    <span class="notice-icon" aria-hidden="true">⚠</span>
+                    <span class="notice-text">
+                        <strong>
+                            Airport charges are NOT included
+                            in the fares shown above.
+                        </strong>
+                    </span>
                 </p>
 
                 <p>
-                    Night premiums may apply.
+                    <span class="notice-icon" aria-hidden="true">◷</span>
+                    <span class="notice-text">
+                        <strong>Night premiums may apply.</strong>
+                    </span>
+                </p>
+
+                <p class="vehicle-notice">
+                    <span class="notice-icon" aria-hidden="true">🚘</span>
+                    <span class="notice-text">
+                        Bigger vehicles are available on request.
+                        Additional charges may apply.
+                    </span>
                 </p>
 
                 <p>
-                    Bigger vehicles are available on request.
-                    Additional charges may apply.
-                </p>
-
-                <p>
-                    Your full fare will be confirmed at the time
-                    of booking.
+                    <span class="notice-icon" aria-hidden="true">£</span>
+                    <span class="notice-text">
+                        <strong>
+                            Your full fare will be confirmed at the
+                            time of booking.
+                        </strong>
+                    </span>
                 </p>
 
             </div>
@@ -725,6 +758,22 @@
                 </a>
 
             </div>
+
+        </section>
+
+        <!-- Airport Transfers introduction -->
+
+        <section class="page-heading">
+
+            <h1>Airport Transfers</h1>
+
+            <p class="intro">
+                Ali Taxis provides reliable airport transfers from
+                Paddock Wood, Pembury, Five Oak Green, Horsmonden,
+                Goudhurst and surrounding areas. Professional, friendly
+                service with fixed prices and comfortable journeys to
+                Heathrow, Gatwick, Stansted, Luton and London City Airport.
+            </p>
 
         </section>
 
