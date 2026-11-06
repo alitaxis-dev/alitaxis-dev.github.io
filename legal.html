@@ -1,275 +1,610 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms & Conditions | Ali Taxis</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-    margin:0;
-    background:#0d0d0d;
-    color:#ffffff;
-    font-family:Arial,sans-serif;
-    line-height:1.7;
-}
+    <title>Legal Information & Terms | Ali Taxis</title>
 
-/* Navigation */
-.navbar {
-    background: #111111;
-    border-bottom: 1px solid #d4af37;
-    padding: 14px 20px;
-}
+    <meta name="description" content="Read the booking terms, cancellation policy, airport waiting times and passenger information for Ali Taxis, serving Paddock Wood, Pembury and surrounding areas.">
 
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 28px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    <link rel="canonical" href="https://alitaxis.co.uk/legal.html">
 
-.nav-menu a {
-    color: #d4af37;
-    font-weight: bold;
-    font-size: 15px;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-.nav-menu a:hover {
-    color: #ffffff;
-}
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+        }
 
-.menu-toggle {
-    display: none;
-    background: transparent;
-    border: 1px solid #d4af37;
-    color: #d4af37;
-    padding: 8px 12px;
-    font-size: 16px;
-    cursor: pointer;
-}
+        header {
+            background: #080808;
+            border-bottom: 2px solid #d4af37;
+            padding: 20px 15px;
+            text-align: center;
+        }
 
-.container{
-    max-width:1000px;
-    margin:40px auto;
-    padding:30px;
-}
+        nav {
+            max-width: 1100px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px 32px;
+        }
 
-.card{
-    background:#161616;
-    border:1px solid #d4af37;
-    border-radius:15px;
-    padding:30px;
-    box-shadow:0 0 20px rgba(212,175,55,0.15);
-}
+        nav a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.2s ease;
+        }
 
-h1{
-    color:#d4af37;
-    text-align:center;
-    margin-bottom:30px;
-}
+        nav a:hover,
+        nav a.active {
+            color: #ffd700;
+        }
 
-h2{
-    color:#d4af37;
-    margin-top:30px;
-}
+        .logo {
+            display: block;
+            max-width: 900px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
 
-strong{
-    color:#ffd700;
-}
+        main {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
 
-ul{
-    padding-left:20px;
-}
+        h1,
+        h2,
+        h3 {
+            color: #d4af37;
+        }
 
-.notice{
-    background:#222;
-    border-left:5px solid #d4af37;
-    padding:15px;
-    margin-top:25px;
-    border-radius:8px;
-}
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
 
-.home-btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:12px 24px;
-    background:#d4af37;
-    color:#000;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
+        .intro {
+            text-align: center;
+            color: #ccc;
+            margin-bottom: 35px;
+        }
 
-.home-btn:hover{
-    background:#ffd700;
-}
+        .legal-section {
+            background: #101010;
+            border: 1px solid #55451b;
+            border-radius: 8px;
+            padding: 22px;
+            margin-bottom: 20px;
+        }
 
-/* Mobile navigation */
-@media (max-width:700px){
+        .legal-section h2 {
+            margin-top: 0;
+            font-size: 21px;
+        }
 
-    .navbar{
-        padding:12px 16px;
-    }
+        .legal-section h3 {
+            font-size: 17px;
+        }
 
-    .menu-toggle{
-        display:block;
-        margin:0 auto;
-    }
+        .legal-section p:last-child {
+            margin-bottom: 0;
+        }
 
-    .nav-menu{
-        display:none;
-        flex-direction:column;
-        gap:0;
-        padding-top:12px;
-    }
+        ul {
+            padding-left: 22px;
+        }
 
-    .nav-menu.open{
-        display:flex;
-    }
+        li {
+            margin-bottom: 8px;
+        }
 
-    .nav-menu li{
-        width:100%;
-        text-align:center;
-        padding:11px 0;
-        border-top:1px solid #30291a;
-    }
+        a {
+            color: #ffd700;
+        }
 
-    .container{
-        padding:15px;
-        margin:20px auto;
-    }
+        .contact-section {
+            background: #101010;
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 35px;
+        }
 
-    .card{
-        padding:20px;
-    }
-}
-</style>
+        .contact-section h2 {
+            margin-top: 0;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #d4af37, #f4d03f);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 6px;
+            margin: 12px 0;
+        }
+
+        .contact-button:hover {
+            background: #ffd700;
+        }
+
+        footer {
+            background: #080808;
+            border-top: 1px solid #d4af37;
+            text-align: center;
+            padding: 22px 15px;
+            margin-top: 45px;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                gap: 12px 18px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .legal-section {
+                padding: 17px;
+            }
+
+            main {
+                padding: 0 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- Navigation -->
-<nav class="navbar" aria-label="Main navigation">
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="local.html">Local Taxi Journeys</a>
+        <a href="airports.html">Airport Transfers</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="legal.html" class="active">Legal</a>
+    </nav>
 
-    <button
-        class="menu-toggle"
-        id="menuToggle"
-        aria-expanded="false"
-        aria-controls="navMenu"
-        type="button">
-        ☰ Menu
-    </button>
+</header>
 
-    <ul class="nav-menu" id="navMenu">
+<main>
 
-        <li>
-            <a href="index.html">Home</a>
-        </li>
+    <h1>Legal Information & Terms</h1>
 
-        <li>
-            <a href="local.html">Local Taxi Journeys</a>
-        </li>
+    <p class="intro">
+        Please read the following information before booking a journey with Ali Taxis.
+        These terms explain our booking arrangements, cancellation policy and passenger responsibilities.
+    </p>
 
-        <li>
-            <a href="airports.html">Airport Transfers</a>
-        </li>
+    <section class="legal-section">
+        <h2>1. About Ali Taxis</h2>
 
-        <li>
-            <a href="reviews.html">Reviews</a>
-        </li>
+        <p>
+            Ali Taxis provides pre-booked private hire journeys, local taxi journeys
+            and airport transfers around Paddock Wood, Pembury, Five Oak Green,
+            Horsmonden, Goudhurst and surrounding areas.
+        </p>
 
-        <li>
-            <a href="legal.html" aria-current="page">Legal</a>
-        </li>
+        <p>
+            All journeys are subject to availability and applicable private hire
+            licensing requirements.
+        </p>
+    </section>
 
-    </ul>
+    <section class="legal-section">
+        <h2>2. Bookings and Contact</h2>
 
-</nav>
+        <p>
+            Bookings should be made in advance wherever possible. WhatsApp is our
+            preferred method of contact and booking.
+        </p>
 
-<div class="container">
-<div class="card">
+        <p>
+            A booking is only confirmed once the journey details and arrangements
+            have been agreed with Ali Taxis.
+        </p>
 
-<h1>General & Advanced Payment T&Cs</h1> 
+        <p>
+            Customers should provide accurate information, including:
+        </p>
 
-<p>Due to a high number of cancellations, the following Terms & Conditions apply to all bookings made using a payment link.</p>
+        <ul>
+            <li>Pickup address and destination.</li>
+            <li>Pickup date and agreed time.</li>
+            <li>Number of passengers.</li>
+            <li>Number and size of suitcases and other luggage.</li>
+            <li>Flight details and terminal information for airport collections.</li>
+            <li>Any special requirements that may affect the journey.</li>
+        </ul>
 
-<h2>Booking Confirmation</h2>
-<ul>
-<li>Your booking is <strong>not confirmed until payment has been received in full.</strong></li>
-<li>If another customer books the requested time slot before payment is made, your booking request may be cancelled.</li>
-<li>In this situation, your payment link will automatically expire, and you will need to contact us again to check availability.</li>
-</ul>
+        <p>
+            Customers are responsible for checking that all booking details are correct.
+        </p>
+    </section>
 
-<h2>Non-Refundable Payments</h2>
-<p><strong>All payments are strictly non-refundable.</strong></p>
+    <section class="legal-section">
+        <h2>3. Fares and Payments</h2>
 
-<p>If you cancel your booking or fail to attend your scheduled pickup, your payment will be forfeited.</p>
+        <p>
+            Fares are agreed at the time of booking wherever possible.
+            The quoted fare applies to the journey and vehicle arrangements agreed
+            with the customer.
+        </p>
 
-<p>Your requested time slot has been reserved exclusively for you, other bookings have been declined as a result.</p>
+        <ul>
+            <li>Additional stops or changes to the journey may result in extra charges.</li>
+            <li>Airport parking, drop-off and other applicable airport charges may be additional unless agreed otherwise.</li>
+            <li>Night-time or out-of-hours premiums may apply where advised at booking.</li>
+            <li>Larger vehicle requirements may be subject to a different fare.</li>
+        </ul>
 
-<h2>Amendments to Bookings</h2>
+        <p>
+            Any additional charges should be discussed with the customer before
+            they are incurred wherever reasonably possible.
+        </p>
+    </section>
 
-<p>If you wish to make any changes to your booking, including:</p>
+    <section class="legal-section">
+        <h2>4. Airport Transfers</h2>
 
-<ul>
-<li>Date</li>
-<li>Time</li>
-<li>Pickup Location</li>
-<li>Destination</li>
-<li>Number of Passengers</li>
-</ul>
+        <p>
+            Customers booking airport transfers must provide accurate flight
+            information, including the airline, flight number and arrival terminal
+            where applicable.
+        </p>
 
-<p>All changes are subject to availability and may incur additional charges.</p>
+        <p>
+            Customers should keep their mobile phone available on the day of travel
+            so that pickup arrangements can be coordinated.
+        </p>
 
-<h2>Waiting Time Policy</h2>
-<p>A maximum of <strong>6 minutes waiting time</strong> is included, starting from the agreed pickup time.</p>
+        <p>
+            Airport pickup arrangements may be affected by flight delays, terminal
+            changes, traffic, airport restrictions and parking arrangements.
+        </p>
+    </section>
 
-<p>During this period, the driver will make a minimum of <strong>three attempts</strong> to contact you.</p>
+    <section class="legal-section">
+        <h2>5. Cancellations, No-Shows and Refunds</h2>
 
-<h2>No-Show Policy</h2>
+        <p>
+            <strong>Customer cancellations and no-shows are non-refundable.</strong>
+        </p>
 
-<p>If <strong>all passengers are not inside the vehicle within the 6-minute waiting period</strong>, the booking will be treated as a <strong>no-show</strong>.</p>
+        <ul>
+            <li>
+                If a customer cancels a confirmed booking for any reason,
+                no refund will be provided.
+            </li>
 
-<ul>
-<li>The journey will commence with the current passengers or will be cancelled.</li>
-<li>Your payment will be forfeited if journey does not commence.</li>
-<li>No refund will be issued.</li>
-</ul>
+            <li>
+                If a customer fails to arrive at the agreed pickup location
+                at the agreed time, without contacting Ali Taxis, the booking
+                will be treated as a no-show.
+            </li>
 
-<h2>Acceptance of Terms</h2>
+            <li>
+                No refund will be provided for no-show bookings.
+            </li>
 
-<p>By making payment via the payment link, you confirm that you have read, understood and accepted these Terms & Conditions.</p>
+            <li>
+                Customers should notify Ali Taxis as soon as possible if they
+                need to cancel or amend a booking.
+            </li>
 
-<div class="notice">
-<strong>Important:</strong><br>
-Please ensure you are ready to depart for the time you have booked.
-</div>
+            <li>
+                All cancellations must be communicated directly through
+                WhatsApp, telephone or email.
+            </li>
 
-<!-- <a href="index.html" class="home-btn">← Return to Home Page</a> -->
+            <li>
+                Where Ali Taxis cancels a confirmed booking or is unable to
+                provide the agreed service, an appropriate refund will be
+                provided where legally required.
+            </li>
+        </ul>
 
-</div>
-</div>
+        <p>
+            Nothing in this policy affects statutory consumer rights or remedies
+            that cannot legally be excluded.
+        </p>
+    </section>
 
-<!-- Navigation JavaScript -->
+    <section class="legal-section">
+        <h2>6. Airport Waiting Time</h2>
+
+        <p>
+            For airport collections, up to 60 minutes of waiting time is included,
+            starting from the actual aircraft landing time rather than the
+            scheduled arrival time.
+        </p>
+
+        <p>
+            Additional waiting beyond the included period may incur extra charges.
+            Any applicable additional charges will be communicated to the customer.
+        </p>
+
+        <p>
+            Customers should contact Ali Taxis if they experience problems with
+            immigration, baggage collection or other delays after landing.
+        </p>
+    </section>
+
+    <section class="legal-section">
+        <h2>7. Passenger Responsibilities</h2>
+
+        <p>Passengers are expected to:</p>
+
+        <ul>
+            <li>Be ready at the agreed pickup location and time.</li>
+            <li>Wear seat belts throughout the journey.</li>
+            <li>Follow reasonable safety instructions from the driver.</li>
+            <li>Behave respectfully towards the driver and vehicle.</li>
+            <li>Ensure children are appropriately supervised.</li>
+            <li>Inform Ali Taxis in advance about any special travel requirements.</li>
+        </ul>
+    </section>
+
+    <section class="legal-section">
+        <h2>8. Vehicle Capacity and Luggage</h2>
+
+        <p>
+            The standard vehicle can accommodate up to four passengers, subject
+            to available luggage space.
+        </p>
+
+        <p>
+            A larger or six-seater vehicle may be available by prior arrangement
+            and must be confirmed before the booking is accepted.
+        </p>
+
+        <p>
+            Customers must provide accurate passenger and luggage information
+            when booking. Ali Taxis cannot guarantee that all luggage will fit
+            if the information supplied is inaccurate.
+        </p>
+    </section>
+
+    <section class="legal-section">
+        <h2>9. Passenger Conduct and Vehicle Cleanliness</h2>
+
+        <p>
+            Passengers must treat the driver and vehicle with respect.
+            Smoking, including the use of electronic cigarettes and vaping,
+            is not permitted inside the vehicle.
+        </p>
+
+        <p>
+            Passengers may be held responsible for damage, excessive mess or
+            specialist cleaning costs caused by their actions, subject to
+            applicable law.
+        </p>
+    </section>
+
+    <section class="legal-section">
+        <h2>10. Pets and Assistance Animals</h2>
+
+        <p>
+            Customers travelling with pets should contact Ali Taxis before booking
+            to discuss arrangements.
+        </p>
+
+        <p>
+            Assistance dogs will be accommodated in accordance with applicable
+            legal requirements.
+        </p>
+    </section>
+
+    <section class="legal-section">
+        <h2>11. Delays and Circumstances Beyond Our Control</h2>
+
+        <p>
+            Ali Taxis will make reasonable efforts to provide journeys at the
+            agreed time. However, delays may occur due to circumstances outside
+            our control, including:
+        </p>
+
+        <ul>
+            <li>Heavy traffic or road closures.</li>
+            <li>Accidents or road incidents.</li>
+            <li>Severe weather conditions.</li>
+            <li>Airport or public transport disruption.</li>
+            <li>Vehicle breakdowns or unexpected operational issues.</li>
+        </ul>
+
+        <p>
+            Where possible, customers will be informed of significant delays
+            and alternative arrangements will be considered.
+        </p>
+    </section>
+
+    <section class="legal-section">
+        <h2>12. Lost Property</h2>
+
+        <p>
+            Customers should check the vehicle carefully before leaving.
+            If an item is left behind, contact Ali Taxis as soon as possible
+            with a description of the item and journey details.
+        </p>
+
+        <p>
+            Reasonable efforts will be made to locate and return lost property.
+        </p>
+    </section>
+
+    <section class="legal-section">
+        <h2>13. Accessibility and Special Requirements</h2>
+
+        <p>
+            Customers with accessibility requirements or special travel needs
+            should discuss these with Ali Taxis before confirming a booking.
+        </p>
+
+        <p>
+            This helps ensure that suitable arrangements can be considered
+            before the journey takes place.
+        </p>
+    </section>
+
+    <section class="legal-section">
+        <h2>14. Safety and Right to Refuse a Journey</h2>
+
+        <p>
+            Ali Taxis reserves the right to refuse or discontinue a journey
+            where it is reasonably necessary for safety, legal or licensing
+            reasons, including threatening, abusive or dangerous behaviour.
+        </p>
+
+        <p>
+            Any such decision will be handled in accordance with applicable
+            legal requirements.
+        </p>
+    </section>
+
+    <section class="legal-section">
+        <h2>15. Liability</h2>
+
+        <p>
+            Ali Taxis will take reasonable care when providing its services.
+            Nothing in these terms excludes or limits liability where it would
+            be unlawful to do so.
+        </p>
+
+        <p>
+            Nothing in these terms affects your statutory rights as a consumer.
+        </p>
+    </section>
+
+    <section class="legal-section">
+        <h2>16. Privacy and Personal Information</h2>
+
+        <p>
+            Personal information supplied when making a booking will be used
+            for booking administration, communication and providing the
+            requested transport service.
+        </p>
+
+        <p>
+            Customer information will be handled in accordance with applicable
+            UK data protection legislation.
+        </p>
+
+        <p>
+            Customers should avoid sending unnecessary sensitive personal
+            information when making a booking.
+        </p>
+    </section>
+
+    <section class="legal-section">
+        <h2>17. Complaints and Customer Enquiries</h2>
+
+        <p>
+            If you have a question, concern or complaint about a journey,
+            please contact Ali Taxis directly.
+        </p>
+
+        <p>
+            WhatsApp is the preferred contact method. Please include your
+            journey date and relevant booking details so that the matter
+            can be looked into.
+        </p>
+    </section>
+
+    <section class="legal-section">
+        <h2>18. Changes to These Terms</h2>
+
+        <p>
+            Ali Taxis may update these terms from time to time.
+            The latest version published on this website will apply to
+            future bookings.
+        </p>
+    </section>
+
+    <section class="legal-section">
+        <h2>19. Governing Law</h2>
+
+        <p>
+            These terms are governed by the laws of England and Wales.
+            Any disputes will be dealt with by the courts of England and Wales,
+            subject to applicable consumer protection rights.
+        </p>
+    </section>
+
+    <section class="contact-section">
+        <h2>Contact Ali Taxis</h2>
+
+        <p>
+            For bookings, cancellations, amendments or enquiries,
+            please contact us directly.
+        </p>
+
+        <a class="contact-button"
+           href="https://wa.me/447396736270"
+           target="_blank"
+           rel="noopener">
+            Contact Ali Taxis on WhatsApp
+        </a>
+
+        <p>
+            <strong>Telephone:</strong>
+            <a href="tel:07396736270">07396 736270</a>
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:AliTaxisTW@gmail.com">AliTaxisTW@gmail.com</a>
+        </p>
+
+        <p>
+            <a href="index.html">Return to Home</a>
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> Ali Taxis. All rights reserved.</p>
+    <p>
+        <a href="index.html">Home</a> |
+        <a href="legal.html">Legal Information</a>
+    </p>
+</footer>
+
 <script>
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
-
-menuToggle.addEventListener("click", function () {
-    const isOpen = navMenu.classList.toggle("open");
-
-    menuToggle.setAttribute("aria-expanded", isOpen);
-    menuToggle.textContent = isOpen
-        ? "✕ Close"
-        : "☰ Menu";
-});
+    document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
