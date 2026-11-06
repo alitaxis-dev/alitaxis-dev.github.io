@@ -36,7 +36,7 @@
             line-height: 1.7;
         }
 
-        /* Navigation - copied from local.html */
+        /* Navigation */
 
         .navbar {
             background: #111111;
@@ -189,6 +189,42 @@
             margin: 5px;
         }
 
+        /* Google Reviews Widget */
+
+        .google-widget-shell {
+            width: 100%;
+            max-width: 1000px;
+            margin: 26px auto 0;
+            padding: 22px;
+            background: #080808;
+            border: 1px solid #d4af37;
+            border-radius: 12px;
+            box-shadow: 0 0 18px rgba(212, 175, 55, 0.10);
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .google-widget-heading {
+            color: #d4af37;
+            text-align: center;
+            margin: 0 0 18px;
+        }
+
+        .google-widget-frame {
+            width: 100%;
+            min-height: 180px;
+            padding: 16px;
+            background: #000;
+            border: 1px solid #55451b;
+            border-radius: 9px;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .google-widget-frame a {
+            color: #f4d03f;
+        }
+
         /* Information grid */
 
         .info-grid {
@@ -262,10 +298,9 @@
             background: #ffd700;
         }
 
-        /* Mobile layout - copied from local.html */
+        /* Mobile layout */
 
         @media (max-width: 700px) {
-
             .navbar {
                 padding: 12px 16px;
             }
@@ -310,6 +345,14 @@
                 padding: 25px 18px;
             }
 
+            .google-widget-shell {
+                padding: 14px;
+            }
+
+            .google-widget-frame {
+                padding: 10px;
+            }
+
             .floating-whatsapp {
                 right: 12px;
                 bottom: 12px;
@@ -350,29 +393,19 @@
 
     <ul class="nav-menu" id="navMenu">
 
-        <li>
-            <a href="index.html">Home</a>
-        </li>
+        <li><a href="index.html">Home</a></li>
 
-        <li>
-            <a href="local.html">Local Taxi Journeys</a>
-        </li>
+        <li><a href="local.html">Local Taxi Journeys</a></li>
 
-        <li>
-            <a href="airports.html">Airport Transfers</a>
-        </li>
+        <li><a href="airports.html">Airport Transfers</a></li>
 
         <li>
             <a href="reviews.html" aria-current="page">Reviews</a>
         </li>
 
-        <li>
-            <a href="pre-payment.html">Pre-Payment</a>
-        </li>
-        
-        <li>
-            <a href="legal.html">Legal</a>
-        </li>
+        <li><a href="pre-payment.html">Pre-Payment</a></li>
+
+        <li><a href="legal.html">Legal</a></li>
 
     </ul>
 
@@ -381,7 +414,6 @@
 <!-- Header -->
 
 <header>
-
 </header>
 
 <!-- Main content -->
@@ -391,9 +423,6 @@
     <section class="container">
 
         <h1>Customer Reviews</h1>
-
-<div data-review-widget="12938404-0a8a-475a-a836-2d224c4a1c22"></div>
-<script src="https://app.wewidget.app/widget.js" data-widget-id="12938404-0a8a-475a-a836-2d224c4a1c22"></script>
 
         <p class="intro">
             At Ali Taxis, we aim to provide a reliable, friendly and
@@ -406,20 +435,31 @@
 
             <h2>Ali Taxis on Google</h2>
 
-            <div class="stars" aria-label="Google review information">
-                ★★★★★
-            </div>
-
             <p>
-                Have you travelled with Ali Taxis? Read customer feedback
-                on Google or share your own experience.
+                Read feedback from passengers who have travelled with Ali Taxis.
+                You can also leave your own review using the Google review link below.
             </p>
 
-            <p class="review-note">
-                Google reviews and ratings are displayed on Google's
-                platform. Please use the buttons below to view the
-                latest reviews or write a review.
-            </p>
+            <!-- WeWidget Google Reviews -->
+
+            <div class="google-widget-shell">
+
+                <h2 class="google-widget-heading">
+                    Google Customer Reviews
+                </h2>
+
+                <div class="google-widget-frame">
+
+                    <div data-review-widget="12938404-0a8a-475a-a836-2d224c4a1c22"></div>
+
+                    <script
+                        src="https://app.wewidget.app/widget.js"
+                        data-widget-id="12938404-0a8a-475a-a836-2d224c4a1c22">
+                    </script>
+
+                </div>
+
+            </div>
 
             <div class="review-actions">
 
@@ -428,7 +468,7 @@
                     class="btn"
                     target="_blank"
                     rel="noopener noreferrer">
-                    Read Google Reviews
+                    Read / Write a Google Review
                 </a>
 
             </div>
@@ -471,25 +511,18 @@
 <!-- JavaScript -->
 
 <script>
-
     const menuToggle = document.getElementById("menuToggle");
     const navMenu = document.getElementById("navMenu");
 
     menuToggle.addEventListener("click", function () {
-
         const isOpen = navMenu.classList.toggle("open");
 
         menuToggle.setAttribute("aria-expanded", isOpen);
-
-        menuToggle.textContent = isOpen
-            ? "✕ Close"
-            : "☰ Menu";
-
+        menuToggle.textContent = isOpen ? "✕ Close" : "☰ Menu";
     });
 
     document.getElementById("year").textContent =
         new Date().getFullYear();
-
 </script>
 
 </body>
