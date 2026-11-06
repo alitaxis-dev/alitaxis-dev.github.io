@@ -1,25 +1,33 @@
 
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms & Conditions | Ali Taxis</title>
+
+<title>Pre-Payment Terms & Conditions | Ali Taxis</title>
+
+<meta name="description" content="Ali Taxis pre-payment terms and conditions covering booking confirmation, payments, amendments, waiting time and no-shows.">
+
+<link rel="canonical" href="https://alitaxis.co.uk/pre-payment.html">
 
 <style>
-body{
-    margin:0;
-    background:#0d0d0d;
-    color:#ffffff;
-    font-family:Arial,sans-serif;
-    line-height:1.7;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
 }
 
 /* Navigation */
 .navbar {
-    background: #111111;
-    border-bottom: 1px solid #d4af37;
+    background: #080808;
+    border-bottom: 2px solid #d4af37;
     padding: 14px 20px;
 }
 
@@ -42,8 +50,9 @@ body{
     transition: color 0.2s ease;
 }
 
-.nav-menu a:hover {
-    color: #ffffff;
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #ffd700;
 }
 
 .menu-toggle {
@@ -54,101 +63,128 @@ body{
     padding: 8px 12px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-.container{
-    max-width:1000px;
-    margin:40px auto;
-    padding:30px;
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
-.card{
-    background:#161616;
-    border:1px solid #d4af37;
-    border-radius:15px;
-    padding:30px;
-    box-shadow:0 0 20px rgba(212,175,55,0.15);
+.card {
+    background: #101010;
+    border: 1px solid #55451b;
+    border-radius: 10px;
+    padding: 30px;
 }
 
-h1{
-    color:#d4af37;
-    text-align:center;
-    margin-bottom:30px;
+h1 {
+    color: #d4af37;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 30px;
 }
 
-h2{
-    color:#d4af37;
-    margin-top:30px;
+h2 {
+    color: #d4af37;
+    margin-top: 30px;
+    font-size: 21px;
 }
 
-strong{
-    color:#ffd700;
+strong {
+    color: #ffd700;
 }
 
-ul{
-    padding-left:20px;
+ul {
+    padding-left: 22px;
 }
 
-.notice{
-    background:#222;
-    border-left:5px solid #d4af37;
-    padding:15px;
-    margin-top:25px;
-    border-radius:8px;
+li {
+    margin-bottom: 9px;
 }
 
-.home-btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:12px 24px;
-    background:#d4af37;
-    color:#000;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
+.notice {
+    background: #181818;
+    border-left: 5px solid #d4af37;
+    padding: 18px;
+    margin-top: 25px;
+    border-radius: 8px;
 }
 
-.home-btn:hover{
-    background:#ffd700;
+.contact {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #55451b;
+}
+
+.contact a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+footer {
+    background: #080808;
+    border-top: 1px solid #d4af37;
+    text-align: center;
+    padding: 22px 15px;
+    margin-top: 40px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+footer a {
+    color: #d4af37;
+    text-decoration: none;
 }
 
 /* Mobile navigation */
-@media (max-width:700px){
+@media (max-width: 700px) {
 
-    .navbar{
-        padding:12px 16px;
+    .navbar {
+        padding: 12px 16px;
     }
 
-    .menu-toggle{
-        display:block;
-        margin:0 auto;
+    .menu-toggle {
+        display: block;
+        margin: 0 auto;
     }
 
-    .nav-menu{
-        display:none;
-        flex-direction:column;
-        gap:0;
-        padding-top:12px;
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        padding-top: 12px;
     }
 
-    .nav-menu.open{
-        display:flex;
+    .nav-menu.open {
+        display: flex;
     }
 
-    .nav-menu li{
-        width:100%;
-        text-align:center;
-        padding:11px 0;
-        border-top:1px solid #30291a;
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        padding: 11px 0;
+        border-top: 1px solid #30291a;
     }
 
-    .container{
-        padding:15px;
-        margin:20px auto;
+    .container {
+        padding: 14px;
+        margin: 20px auto;
     }
 
-    .card{
-        padding:20px;
+    .card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 19px;
     }
 }
 </style>
@@ -156,7 +192,7 @@ ul{
 
 <body>
 
-<!-- Navigation -->
+<!-- Main Navigation -->
 <nav class="navbar" aria-label="Main navigation">
 
     <button
@@ -187,7 +223,11 @@ ul{
         </li>
 
         <li>
-            <a href="legal.html" aria-current="page">Legal</a>
+            <a href="pre-payment.html" class="active" aria-current="page">Pre-Payment</a>
+        </li>
+
+        <li>
+            <a href="legal.html">Legal</a>
         </li>
 
     </ul>
@@ -195,82 +235,234 @@ ul{
 </nav>
 
 <div class="container">
+
 <div class="card">
 
-<h1>General & Advanced Payment T&Cs</h1> 
+<h1>General & Advanced Payment Terms & Conditions</h1>
 
-<p>Due to a high number of cancellations, the following Terms & Conditions apply to all bookings made using a payment link.</p>
+<p>
+Due to a high number of cancellations, the following terms and conditions
+apply to bookings made using an Ali Taxis payment link.
+</p>
 
-<h2>Booking Confirmation</h2>
-<ul>
-<li>Your booking is <strong>not confirmed until payment has been received in full.</strong></li>
-<li>If another customer books the requested time slot before payment is made, your booking request may be cancelled.</li>
-<li>In this situation, your payment link will automatically expire, and you will need to contact us again to check availability.</li>
-</ul>
-
-<h2>Non-Refundable Payments</h2>
-<p><strong>All payments are strictly non-refundable.</strong></p>
-
-<p>If you cancel your booking or fail to attend your scheduled pickup, your payment will be forfeited.</p>
-
-<p>Your requested time slot has been reserved exclusively for you, other bookings have been declined as a result.</p>
-
-<h2>Amendments to Bookings</h2>
-
-<p>If you wish to make any changes to your booking, including:</p>
+<h2>1. Booking Confirmation</h2>
 
 <ul>
-<li>Date</li>
-<li>Time</li>
-<li>Pickup Location</li>
-<li>Destination</li>
-<li>Number of Passengers</li>
+    <li>
+        Your booking is <strong>not confirmed until payment has been received in full.</strong>
+    </li>
+
+    <li>
+        If another customer books the requested time slot before payment
+        is received, your booking request may be cancelled.
+    </li>
+
+    <li>
+        In this situation, the payment link may expire and you will need
+        to contact Ali Taxis again to check availability.
+    </li>
+
+    <li>
+        Payment alone does not confirm a booking unless the requested
+        journey and availability have been agreed.
+    </li>
 </ul>
 
-<p>All changes are subject to availability and may incur additional charges.</p>
+<h2>2. Non-Refundable Payments</h2>
 
-<h2>Waiting Time Policy</h2>
-<p>A maximum of <strong>6 minutes waiting time</strong> is included, starting from the agreed pickup time.</p>
+<p>
+<strong>Payments are non-refundable where a customer cancels a confirmed
+booking or fails to attend the agreed pickup.</strong>
+</p>
 
-<p>During this period, the driver will make a minimum of <strong>three attempts</strong> to contact you.</p>
+<p>
+If you cancel your confirmed booking or fail to attend your scheduled
+pickup, your payment will be forfeited, subject to applicable statutory
+consumer rights.
+</p>
 
-<h2>No-Show Policy</h2>
+<p>
+Your requested time slot has been reserved for you and other booking
+requests may have been declined as a result.
+</p>
 
-<p>If <strong>all passengers are not inside the vehicle within the 6-minute waiting period</strong>, the booking will be treated as a <strong>no-show</strong>.</p>
+<h2>3. Amendments to Bookings</h2>
+
+<p>
+If you wish to make changes to your booking, including:
+</p>
 
 <ul>
-<li>The journey will commence with the current passengers or will be cancelled.</li>
-<li>Your payment will be forfeited if journey does not commence.</li>
-<li>No refund will be issued.</li>
+    <li>Date</li>
+    <li>Time</li>
+    <li>Pickup location</li>
+    <li>Destination</li>
+    <li>Number of passengers</li>
 </ul>
 
-<h2>Acceptance of Terms</h2>
+<p>
+All changes are subject to availability and may incur additional charges.
+Please contact Ali Taxis as soon as possible to request an amendment.
+</p>
 
-<p>By making payment via the payment link, you confirm that you have read, understood and accepted these Terms & Conditions.</p>
+<p>
+A requested change is not confirmed until it has been agreed by Ali Taxis.
+</p>
+
+<h2>4. Waiting Time Policy</h2>
+
+<p>
+A maximum of <strong>6 minutes of waiting time</strong> is included,
+starting from the agreed pickup time.
+</p>
+
+<p>
+During this period, the driver will make a minimum of
+<strong>three attempts to contact you</strong> using the contact details
+provided with your booking.
+</p>
+
+<p>
+Customers should ensure their phone is switched on and available at
+the time of pickup.
+</p>
+
+<h2>5. No-Show Policy</h2>
+
+<p>
+If <strong>all passengers are not inside the vehicle within the
+6-minute waiting period</strong>, the booking will be treated as a
+<strong>no-show</strong>.
+</p>
+
+<ul>
+    <li>
+        The journey may proceed with the passengers who are present,
+        where appropriate and agreed.
+    </li>
+
+    <li>
+        If the journey cannot proceed because the booked passengers
+        have not arrived, the booking may be cancelled.
+    </li>
+
+    <li>
+        Your payment will be forfeited where the booking is treated
+        as a customer no-show, subject to applicable statutory rights.
+    </li>
+
+    <li>
+        No refund will be issued where the non-refundable cancellation
+        or no-show terms lawfully apply.
+    </li>
+</ul>
+
+<h2>6. Passenger Responsibilities</h2>
+
+<p>
+Customers are responsible for:
+</p>
+
+<ul>
+    <li>Being ready at the agreed pickup location and time.</li>
+    <li>Providing a correct and working contact telephone number.</li>
+    <li>Ensuring all passengers are ready to travel.</li>
+    <li>Informing Ali Taxis promptly of any problems or delays.</li>
+    <li>Checking all booking details before making payment.</li>
+</ul>
+
+<h2>7. Acceptance of Terms</h2>
+
+<p>
+By making payment through an Ali Taxis payment link, you confirm that
+you have been given the opportunity to read and understand these
+pre-payment terms and conditions.
+</p>
+
+<p>
+Payment confirms your acceptance of these terms, subject to any
+statutory consumer rights that cannot legally be excluded.
+</p>
 
 <div class="notice">
-<strong>Important:</strong><br>
-Please ensure you are ready to depart for the time you have booked.
+
+<strong>IMPORTANT – PLEASE READ BEFORE MAKING PAYMENT</strong>
+
+<p>
+Please ensure you are ready to depart at your booked pickup time.
+The six-minute waiting period starts from the agreed pickup time,
+not from the time you arrive at the pickup location.
+</p>
+
+<p>
+If you need to amend or cancel your booking, contact Ali Taxis
+as soon as possible.
+</p>
+
 </div>
 
-<!-- <a href="index.html" class="home-btn">← Return to Home Page</a> -->
+<div class="contact">
+
+<h2>Contact Ali Taxis</h2>
+
+<p>
+For booking amendments or enquiries, please contact us directly.
+</p>
+
+<p>
+<strong>Telephone:</strong>
+<a href="tel:07396736270">07396 736270</a>
+</p>
+
+<p>
+<strong>WhatsApp:</strong>
+<a href="https://wa.me/447396736270" target="_blank" rel="noopener">
+Contact Ali Taxis
+</a>
+</p>
+
+<p>
+<strong>Email:</strong>
+<a href="mailto:AliTaxisTW@gmail.com">
+AliTaxisTW@gmail.com
+</a>
+</p>
+
+</div>
 
 </div>
 </div>
 
-<!-- Navigation JavaScript -->
+<footer>
+
+<p>&copy; <span id="year"></span> Ali Taxis. All rights reserved.</p>
+
+<p>
+<a href="index.html">Home</a> |
+<a href="pre-payment.html">Pre-Payment</a> |
+<a href="legal.html">Legal</a>
+</p>
+
+</footer>
+
 <script>
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
 menuToggle.addEventListener("click", function () {
+
     const isOpen = navMenu.classList.toggle("open");
 
     menuToggle.setAttribute("aria-expanded", isOpen);
+
     menuToggle.textContent = isOpen
         ? "✕ Close"
         : "☰ Menu";
+
 });
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 </script>
 
 </body>
